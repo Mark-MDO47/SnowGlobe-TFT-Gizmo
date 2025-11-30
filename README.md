@@ -9,6 +9,9 @@ Here are my extension ideas:
 
 To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 **Table Of Contents**
+* [Top](#snowglobe-tft\-gizmo "Top")
+* [Preparation of the Electronics](#preparation-of-the-electronics "Preparation of the Electronics")
+  * [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")
 
 ## Preparation of the Electronics
 
