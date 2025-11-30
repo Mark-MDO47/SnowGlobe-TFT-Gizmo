@@ -30,19 +30,19 @@ Next - assemble with TFT Gizmo - https://learn.adafruit.com/adafruit-tft-gizmo<b
 Finally - Store your boot.py and code.py onto your **CIRCUITPY** drive
 
 ## References
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 
 ### From Nordic
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 **nRF52840 Specs**
 - https://docs.nordicsemi.com/bundle/ps_nrf52840/page/keyfeatures_html5.html
 - https://docs-be.nordicsemi.com/bundle/ps_nrf52840/attach/nRF52840_PS_v1.11.pdf?_LANG=enus
 
 ### From Adafruit
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 
 #### Circuit Playground Bluefruit - Bluetooth Low Energy
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 - https://www.adafruit.com/product/4333
   - nRF52840 Cortex M4 processor with Bluetooth Low Energy
     - On-chip according to specification: 1 MBbyte FLASH and 256 kB RAM
@@ -51,12 +51,12 @@ Finally - Store your boot.py and code.py onto your **CIRCUITPY** drive
   - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/pinouts
 
 #### Circuit Playground TFT Gizmo
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 - https://www.adafruit.com/product/4367
 - https://learn.adafruit.com/adafruit-tft-gizmo
 
 #### Update to Latest Firmware and CircuitPython
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 Good idea to do this when getting a new Circuit Playground Bluefruit.
 - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/downloads
 - updating loader to 0.9.2 from 0.9.0
@@ -67,12 +67,12 @@ Good idea to do this when getting a new Circuit Playground Bluefruit.
   - adafruit-circuitpython-circuitplayground_bluefruit-en_US-10.0.3.uf2
 
 #### Learn the basics of Circuit Playground Bluefruit
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 From the Adafruit Learning System
 - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit
 
 #### The Big Cahuna - the API registry.
-[Top](#circuitplaygroundble_expts "Top")<br>
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 It is for all Circuit Playground and includes a section on the Bluefruit model.
 - https://docs.circuitpython.org/projects/circuitplayground/en/latest/api.html
 
