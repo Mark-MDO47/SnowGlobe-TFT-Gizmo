@@ -6,6 +6,7 @@ My build of the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
 Here are my extension ideas:
 - I want the snow globe to cycle through several different background images
 - I want to power it ultimately from AC so it can switch on and off with the Christmas tree
+- I want to have some control of loading the background images
 
 To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 
