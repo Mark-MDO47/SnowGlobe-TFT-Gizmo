@@ -33,10 +33,17 @@ Finally - Store your boot.py and code.py onto your **CIRCUITPY** drive
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 I am using a USB cable plugged into a wall charger to power the Snow Globe. That way it can be powered on/off with the rest of the Christmas tree lights.
 
-I needed a way to get the USB cable into the plastic globe.
+I needed a way to get the USB cable into the plastic globe. Ideally I would put a 7/16 inch hole and add a rubber grommet. However, with my slow-speed electric drill, any bit larger than 7/32 inch would grab as it went through and shatter the plastic.
 
+Eventually I used the slow-speed electric drill and a 7/32 inch pilot hole, followed by a grinding attachment from my Dremel tool again with the slow-speed electric drill to get about a 3/8 inch hole. I finished up with a smaller grinding tool on the actual Dremel tool to slot out the sides. Not pretty, but it fits the cable and it is on the backside of the ornament.
+
+## Software
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+My build of the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
+- https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
 ## Parts List
+[Top](#snowglobe-tft\-gizmo "Top")<br>
 | Qty | Description | URL |
 | --- | --- | --- |
 | 1 | Adafruit Circuit Playground Bluefruit - Bluetooth® Low Energy | https://www.adafruit.com/product/4333 |
