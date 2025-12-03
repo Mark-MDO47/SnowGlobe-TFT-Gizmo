@@ -12,6 +12,9 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
 **Table Of Contents**
 * [Top](#snowglobe-tft\-gizmo "Top")
 * [Preparation of the Electronics](#preparation-of-the-electronics "Preparation of the Electronics")
+* [Mechanical Preparation](#mechanical-preparation "Mechanical Preparation")
+* [Software](#software "Software")
+* [Parts List](#parts-list "Parts List")
 * [References](#references "References")
   * [From Nordic](#from-nordic "From Nordic")
   * [From Adafruit](#from-adafruit "From Adafruit")
