@@ -46,6 +46,7 @@ Because the latest stable version of CircuitPython was 10.0.3 when I did this pr
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/code.original.simple.10x.py
 
 My version of the code is here:
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/code.py
 
 I did a little code re-arranging to suit my style. I was hoping to be able to have it load a sequence of background images but found it would hit memory limitations after anywhere from 2 to 5 images in my various attempts to solve it. I am not sure if the issue is a memory leak or memory fragmentation. As Christmas was approaching, I opted to do a reboot to load the next background image to avoid memory issues.
 
