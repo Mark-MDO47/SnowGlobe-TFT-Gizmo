@@ -29,6 +29,24 @@ Next - store the **lib** files from the **Project Bundle** of **Simple Snow Glob
 Next - assemble with TFT Gizmo - https://learn.adafruit.com/adafruit-tft-gizmo<br>
 Finally - Store your boot.py and code.py onto your **CIRCUITPY** drive
 
+## Mechanical Preparation
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+I am using a USB cable plugged into a wall charger to power the Snow Globe. That way it can be powered on/off with the rest of the Christmas tree lights.
+
+I needed a way to get the USB cable into the plastic globe.
+
+
+## Parts List
+| Qty | Description | URL |
+| --- | --- | --- |
+| 1 | Adafruit Circuit Playground Bluefruit - Bluetooth® Low Energy | https://www.adafruit.com/product/4333 |
+| 1 | Adafruit Circuit Playground TFT GIZMO | https://www.adafruit.com/product/4367 |
+| 1 | Itramax Micro USB Extension Cable 20FT (note: USB-A to USB-MicroB) | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
+| 1 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
+| 1 | Ornament hook | https://www.amazon.com/dp/B0G1CNB86G |
+| 1 | 5mm x 20M (0.2in x 65ft) Conductive Cloth Fabric Adhesive Tape | https://www.amazon.com/dp/B01ALDR0D0 |
+
+
 ## References
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 
