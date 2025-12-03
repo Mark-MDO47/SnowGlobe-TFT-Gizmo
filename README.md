@@ -70,7 +70,7 @@ I still might use the conductive tape to allow touch control of some portion of 
 | 1 | Adafruit Circuit Playground Bluefruit - Bluetooth® Low Energy | https://www.adafruit.com/product/4333 |
 | 1 | Adafruit Circuit Playground TFT GIZMO | https://www.adafruit.com/product/4367 |
 | 1 | Adafruit DIY Ornament Kit - 6cm Diameter - Perfect for Circuit Playground | https://www.adafruit.com/product/4036 |
-| 1 | Itramax Micro USB Extension Cable 20FT (note: USB-A to USB-MicroB) | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
+| 1 | Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-MicroB) | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
 | 1 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 | 1 | Ornament hook | https://www.amazon.com/dp/B0G1CNB86G |
 | 1 | 5mm x 20M (0.2in x 65ft) Conductive Cloth Fabric Adhesive Tape | https://www.amazon.com/dp/B01ALDR0D0 |
