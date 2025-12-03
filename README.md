@@ -58,6 +58,8 @@ Since I had not figured out writing to the FLASH filesystem and Christmas was st
 If you are interested in reading about some of the things I tried or my thoughts on random numbers, see here:
 - https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 
+I still might use the conductive tape to allow touch control of some portion of the Snow Globe.
+
 ## Parts List
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 | Qty | Description | URL |
