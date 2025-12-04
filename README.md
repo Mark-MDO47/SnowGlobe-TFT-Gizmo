@@ -29,11 +29,11 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
 ## Preparation of the Electronics
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - First - go here [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")<br>
-- Next - store the **lib** files from the **Project Bundle** of **Simple Snow Globe** in the original **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson onto your **CIRCUITPY** drive - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe?view=all<br>
-- Next - assemble with TFT Gizmo - https://learn.adafruit.com/adafruit-tft-gizmo<br>
-- Finally - Store your boot.py and code.py onto your **CIRCUITPY** drive
+- Next - store the **lib** files from the **Project Bundle** (I am in version 10x of CircuitPython) of **Simple Snow Globe** in the original **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson onto your **CIRCUITPY** drive - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe?view=all<br>
+- Next - mechanically assemble Circuit Playground Bluefruit with TFT Gizmo - https://learn.adafruit.com/adafruit-tft-gizmo<br>
+- Finally - Connect USB to your computer and store your boot.py and code.py onto your **CIRCUITPY** drive
 
-## Mechanical Preparation
+## Preparation of Plastic Ornament Globe
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 I am using a USB cable plugged into a wall charger to power the Snow Globe. That way it can be powered on/off with the rest of the Christmas tree lights.
 
