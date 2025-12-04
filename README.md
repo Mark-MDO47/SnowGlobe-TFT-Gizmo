@@ -43,7 +43,11 @@ Eventually I used the slow-speed electric drill and a 7/32 inch pilot hole, foll
 
 ## Software
 [Top](#snowglobe-tft\-gizmo "Top")<br>
-The software I am using is based on the **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson. This is a CircuitPython program.
+See the following to examine the code.py and boot.py I am using.
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/README.md
+
+The code.py software I am using is based on the **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson. This is a CircuitPython program.
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
 Because the latest stable version of CircuitPython was 10.0.3 when I did this project, I started from the "simple" version of Carter's Snow Globe for CircuitPython 10.x. The original version is here in addition to the Adafruit Learning address above.
