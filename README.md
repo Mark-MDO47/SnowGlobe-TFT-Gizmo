@@ -23,7 +23,7 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
     * [Circuit Playground TFT Gizmo](#circuit-playground-tft-gizmo "Circuit Playground TFT Gizmo")
     * [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")
     * [Learn the basics of Circuit Playground Bluefruit](#learn-the-basics-of-circuit-playground-bluefruit "Learn the basics of Circuit Playground Bluefruit")
-    * [The Big Cahuna - the API registry.](#the-big-cahuna-\--the-api-registry "The Big Cahuna - the API registry.")
+    * [The Big Kahuna - the API registry.](#the-big-Kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
   * [Non-Official but Useful](#non\-official-but-useful "Non-Official but Useful")
 
 ## Preparation of the Electronics
@@ -119,7 +119,7 @@ Good idea to do this when getting a new Circuit Playground Bluefruit.
 From the Adafruit Learning System
 - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit
 
-#### The Big Cahuna - the API registry.
+#### The Big Kahuna - the API registry.
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 It is for all Circuit Playground and includes a section on the Bluefruit model.
 - https://docs.circuitpython.org/projects/circuitplayground/en/latest/api.html
