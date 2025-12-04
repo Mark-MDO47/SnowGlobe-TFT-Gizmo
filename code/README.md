@@ -6,7 +6,7 @@
 * [boot.py](#bootpy "boot.py")
 
 ## code.py
-
+[Top](#code "Top")<br>
 The software I am using is based on the **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson. This is a CircuitPython program.
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
@@ -29,3 +29,4 @@ If you are interested in reading about some of the things I tried or my thoughts
 I still might use the conductive tape to allow touch control of some portion of the Snow Globe.
 
 ## boot.py
+[Top](#code "Top")<br>
