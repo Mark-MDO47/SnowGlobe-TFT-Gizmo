@@ -23,7 +23,7 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
     * [Circuit Playground TFT Gizmo](#circuit-playground-tft-gizmo "Circuit Playground TFT Gizmo")
     * [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")
     * [Learn the basics of Circuit Playground Bluefruit](#learn-the-basics-of-circuit-playground-bluefruit "Learn the basics of Circuit Playground Bluefruit")
-    * [The Big Kahuna - the API registry.](#the-big-Kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
+    * [The Big Kahuna - the API registry.](#the-big-kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
   * [Non-Official but Useful](#non\-official-but-useful "Non-Official but Useful")
 
 ## Preparation of the Electronics
