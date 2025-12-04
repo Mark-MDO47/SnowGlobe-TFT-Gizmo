@@ -117,6 +117,7 @@ Good idea to do this when getting a new Circuit Playground Bluefruit.
 #### Learn the basics of Circuit Playground Bluefruit
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 From the Adafruit Learning System
+- https://learn.adafruit.com/circuitpython-made-easy-on-circuit-playground-express/
 - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit
 
 #### The Big Kahuna - the API registry.
