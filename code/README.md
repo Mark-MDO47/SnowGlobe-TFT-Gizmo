@@ -1,6 +1,9 @@
 # Code
 
 **Table Of Contents**
+* [Top](#code "Top")
+* [code.py](#codepy "code.py")
+* [boot.py](#bootpy "boot.py")
 
 ## code.py
 
