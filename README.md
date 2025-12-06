@@ -106,6 +106,7 @@ I still might use the conductive tape to allow touch control of some portion of 
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - https://www.adafruit.com/product/4367
 - https://learn.adafruit.com/adafruit-tft-gizmo
+- https://learn.adafruit.com/circuitpython-display-support-using-displayio
 
 #### Update to Latest Firmware and CircuitPython
 [Top](#snowglobe-tft\-gizmo "Top")<br>
