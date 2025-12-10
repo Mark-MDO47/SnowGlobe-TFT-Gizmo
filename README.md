@@ -63,7 +63,7 @@ I was hoping to use the FLASH in the form of a filesystem that CircuitPython pro
 
 Maybe I just need to RTFM! The above says (and I paraphrase): boot.py only runs after a power-cycle or hard reset, not a soft reboot. Duh.
 
-Since I had not figured out writing to the FLASH filesystem and Christmas was still approaching, I decided to use a psuedo-random number generator to choose the background image. I didn't use the standard randrange() method - that is fine for controlling the snowflakes but I didn't want to have a predictable sequence of background images. Eventually I used the least significant portion of the count of nanoseconds since power-on as my "random" number.
+Since I had not figured out writing to the FLASH filesystem and Christmas was still approaching, I decided to use a psuedo-random number generator to choose the background image after reboot. I didn't use the standard randrange() method - that is fine for controlling the snowflakes but I didn't want to have a predictable sequence of background images. Eventually I used the least significant portion of the count of nanoseconds since power-on as my "random" number.
 
 If you are interested in reading about some of the things I tried or my thoughts on random numbers, see here:
 - https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
