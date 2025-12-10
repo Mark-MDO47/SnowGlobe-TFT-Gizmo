@@ -12,6 +12,7 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
 
 **Table Of Contents**
 * [Top](#snowglobe-tft\-gizmo "Top")
+* [v1.0.0 Snow Globe Behavior](#v100-snow-globe-behavior "v1.0.0 Snow Globe Behavior")
 * [Preparation of the Electronics](#preparation-of-the-electronics "Preparation of the Electronics")
 * [Preparation of Plastic Ornament Globe](#preparation-of-plastic-ornament-globe "Preparation of Plastic Ornament Globe")
 * [Software](#software "Software")
