@@ -98,7 +98,8 @@ I still might use the conductive tape to allow touch control of some portion of 
 - https://www.adafruit.com/product/4333
   - nRF52840 Cortex M4 processor with Bluetooth Low Energy
     - On-chip according to specification: 1 MBbyte FLASH and 256 kB RAM
-    - When using CircuitPython, there is a 2 MByte USB filesystem FLASH disk. Maybe this comes from some other FLASH on the board?
+  - Schematic here: https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/downloads
+    - When using CircuitPython, there is a 2 MByte USB filesystem FLASH disk. This comes from a FLASH part on the board.
   - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/guided-tour
   - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/pinouts
 
