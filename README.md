@@ -76,7 +76,15 @@ Since I had not figured out writing to the FLASH filesystem and Christmas was st
 If you are interested in reading about some of the things I tried or my thoughts on random numbers, see here:
 - https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 
-I still might use the conductive tape to allow touch control of some portion of the Snow Globe.
+### Potential Next Version ideas
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+I might
+- Use the conductive tape to allow touch control of some portion of the Snow Globe
+- Change from SHAKE detection to a TILT or TAP
+- Do some pattern on the RGB LEDs, maybe shading to show time left to reboot
+- Make writing to the FileSystem work
+
+When I tried to import the Circuit Playground libraries in addition to the current libraries, I got lots of conflicts. The original code base was started in 2019. Maybe I will just do a complete re-write with the latest libraries.
 
 ## Parts List
 [Top](#snowglobe-tft\-gizmo "Top")<br>
