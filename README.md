@@ -60,6 +60,7 @@ I did a little code re-arranging to suit my style. I was hoping to be able to ha
 
 I was hoping to use the FLASH in the form of a filesystem that CircuitPython provides to be able to sequence through the images. I made some attempts using the methods described here, but was not able to make that work:
 - https://learn.adafruit.com/adafruit-circuit-playground-bluefruit/circuitpython-storage
+
 Maybe I just need to RTFM! The above says (and I paraphrase): boot.py only runs after a power-cycle or hard reset, not a soft reboot. Duh.
 
 Since I had not figured out writing to the FLASH filesystem and Christmas was still approaching, I decided to use a psuedo-random number generator to choose the background image. I didn't use the standard randrange() method - that is fine for controlling the snowflakes but I didn't want to have a predictable sequence of background images. Eventually I used the least significant portion of the count of nanoseconds since power-on as my "random" number.
