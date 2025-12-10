@@ -10,6 +10,16 @@ Here are my extension ideas:
 
 To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 
+| neither confirm nor deny | pancakes in the morning |
+| --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="400" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="400" alt="Making pancakes in the morning"> |
+
+Here is the Snow Globe in the tree<br>
+| on the tree |
+| --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_OnTheTrap.jpg" width="800" alt="On the tree"> |
+
+
 **Table Of Contents**
 * [Top](#snowglobe-tft\-gizmo "Top")
 * [v1.0.0 Snow Globe Behavior](#v100-snow-globe-behavior "v1.0.0 Snow Globe Behavior")
