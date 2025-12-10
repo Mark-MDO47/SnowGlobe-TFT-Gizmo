@@ -26,6 +26,13 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
     * [The Big Kahuna - the API registry.](#the-big-kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
   * [Non-Official but Useful](#non\-official-but-useful "Non-Official but Useful")
 
+## v1.0.0 Snow Globe Behavior
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+As of v1.0.0:
+- At startup, a psuedo-random number is used to choose the background image and load it up
+- Snowfall starts
+- If either a SHAKE is detected or 300 seconds pass - REBOOT
+
 ## Preparation of the Electronics
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - First - go here [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")<br>
