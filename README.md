@@ -10,14 +10,14 @@ Here are my extension ideas:
 
 To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygroundBLE_expts
 
-| neither confirm nor deny | pancakes in the morning |
-| --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="400" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="400" alt="Making pancakes in the morning"> |
+| neither confirm nor deny | pancakes in the morning | wedding |
+| --- | --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="400" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="400" alt="Making pancakes in the morning"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Wedding.jpg" width="400" alt="At the wedding altar"> |
 
 Here is the Snow Globe in the tree<br>
-| on the tree |
-| --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_OnTheTrap.jpg" width="800" alt="On the tree"> |
+| in the tree - catamaran | in the tree - Christmas |
+| --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_OnTheTrap.jpg" width="400" alt="On the tree"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Tree.jpg" width="400" alt="Christmas time"> |
 
 
 **Table Of Contents**
