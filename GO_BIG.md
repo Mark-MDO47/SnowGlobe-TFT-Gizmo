@@ -13,6 +13,9 @@ I had previously done some experiments with the electronics combination here and
 
 **Table Of Contents**
 * [Top](#go-big "Top")
+* [Circuit Python First Steps](#circuit-python-first-steps "Circuit Python First Steps")
+  * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
+  * [settings toml file](#settings-toml-file "settings toml file")
 
 ## Circuit Python First Steps
 * [Top](#go-big "Top")<br>Here is how to configure the Qualia ESP32-S3 for Circuit Python
