@@ -3,6 +3,11 @@
 My build of the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
+Also - **GO BIG**<br>
+I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
+
+Back to **Circuit Playground TFT Gizmo**<br>
 Here are my extension ideas:
 - I want the snow globe to cycle through several different background images
 - I want to power it ultimately from AC so it can switch on and off with the Christmas tree
