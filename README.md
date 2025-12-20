@@ -110,6 +110,12 @@ When I tried to import the Circuit Playground libraries in addition to the curre
 | 1 | Ornament hook | https://www.amazon.com/dp/B0G1CNB86G |
 | 1 | 5mm x 20M (0.2in x 65ft) Conductive Cloth Fabric Adhesive Tape (optional for v1.0.0) | https://www.amazon.com/dp/B01ALDR0D0 |
 
+## Go Big - 2.1 inch Round Display
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+
+See here for my attempts:
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
 ## References
 [Top](#snowglobe-tft\-gizmo "Top")<br>
