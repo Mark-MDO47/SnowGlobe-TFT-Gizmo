@@ -46,7 +46,7 @@ https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitp
 Use the CircUp tool to update the libraries, or else copy the entire new Adafruit library.
 - https://learn.adafruit.com/keep-your-circuitpython-libraries-on-devices-up-to-date-with-circup/usage
 
-### settings toml file
+### Settings toml File
 * [Top](#go-big "Top")<br>
 https://docs.circuitpython.org/en/latest/docs/environment.html
 
