@@ -124,7 +124,7 @@ I had previously done some experiments with a round 2.1" display and an ESP32-S3
 See here for my attempts:
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
-## References
+## References for Circuit Playground Bluefruit and TFT Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 
 ### From Nordic
