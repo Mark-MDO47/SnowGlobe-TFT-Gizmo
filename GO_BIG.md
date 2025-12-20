@@ -20,10 +20,29 @@ I had previously done some experiments with the electronics combination here and
   * [Settings toml File](#settings-toml-file "Settings toml File")
 
 ## The Plan
+* [Top](#go-big "Top")<br>
+I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
+
+I made a version of the Adafruit examples **qualia_paint.py** and **mdo_tablegen.py**
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
+
+The original Adafruit **qualia_paint.py** can be found here:
+- https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
+
+The original Adafruit **tablegen.py** can be found here:
+- https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
+
+
+When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
+
+I modified **mdo_tablegen.py** to also create a **.bin** file that is a big-endian version of the data in raw binary. It now takes about 15 seconds to boot **mdo_qualia_paint.py** reading this **.bin** file.
+
+This **mdo_tablegen.py** will work for the Snow Globe project too. It will take longer to load the **.bin** since we will not be cropping off 1/3 of the picture. Maybe I will make it not write all the pixels that are not actually on the round display to speed things up.
 
 ## Circuit Python First Steps
 * [Top](#go-big "Top")<br>
-Here is how to configure the Qualia ESP32-S3 for Circuit Python
+Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 | To Know | Where |
 | --- | --- |
 | Adafruit Qualia ESP32-S3 for RGB-666 Displays | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays |
