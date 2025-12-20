@@ -8,5 +8,6 @@ I decided to make a bigger version of the Snow Globe based on the following hard
 I had done some experiments with the electronics combination here and had no memory problems doing succesive images.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display
 
-**Table of Contents**
+**Table Of Contents**
+* [Top](#go-big "Top")
 
