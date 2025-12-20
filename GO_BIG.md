@@ -4,9 +4,11 @@ I decided to make a bigger version of the Snow Globe
 
 **Table Of Contents**
 * [Top](#go-big "Top")
+* [The Plan](#the-plan "The Plan")
 * [Circuit Python First Steps](#circuit-python-first-steps "Circuit Python First Steps")
   * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
   * [Settings toml File](#settings-toml-file "Settings toml File")
+* [Parts List](#parts-list "Parts List")
 
 ## The Plan
 * [Top](#go-big "Top")<br>
