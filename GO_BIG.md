@@ -25,7 +25,7 @@ I had previously done some experiments with the electronics combination here and
 I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 
-I made a version of the Adafruit examples **qualia_paint.py** and **mdo_tablegen.py**
+I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
 
 The original Adafruit **qualia_paint.py** can be found here:
