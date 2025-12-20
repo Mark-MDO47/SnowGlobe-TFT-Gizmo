@@ -21,6 +21,7 @@ I had previously done some experiments with the electronics combination here and
 
 ## The Plan
 * [Top](#go-big "Top")<br>
+
 I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 
@@ -42,7 +43,9 @@ This **mdo_tablegen.py** will work for the Snow Globe project too. It will take 
 
 ## Circuit Python First Steps
 * [Top](#go-big "Top")<br>
+
 Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
+
 | To Know | Where |
 | --- | --- |
 | Adafruit Qualia ESP32-S3 for RGB-666 Displays | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays |
@@ -67,6 +70,7 @@ Looks like sometimes I need to reset after saving new code MU.
 
 ### CircUp tool for libraries
 * [Top](#go-big "Top")<br>
+
 https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries
 
 Use the CircUp tool to update the libraries, or else copy the entire new Adafruit library.
@@ -74,6 +78,7 @@ Use the CircUp tool to update the libraries, or else copy the entire new Adafrui
 
 ### Settings toml File
 * [Top](#go-big "Top")<br>
+
 Should probably set the following in **settings.toml** file; enclose strings within double-quotes ""
 - https://docs.circuitpython.org/en/latest/docs/environment.html
 
