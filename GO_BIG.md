@@ -19,17 +19,22 @@ I had previously done some experiments with the electronics combination here and
   * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
   * [Settings toml File](#settings-toml-file "Settings toml File")
 
+## The Plan
+
 ## Circuit Python First Steps
-* [Top](#go-big "Top")<br>Here is how to configure the Qualia ESP32-S3 for Circuit Python
+* [Top](#go-big "Top")<br>
+Here is how to configure the Qualia ESP32-S3 for Circuit Python
 | To Know | Where |
 | --- | --- |
+| Adafruit Qualia ESP32-S3 for RGB-666 Displays | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays |
+| Adafruit Qualia ESP32-S3 - factory reset | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
 | UF2 Bootloader details | https://learn.adafruit.com/adafruit-hallowing/uf2-bootloader-details |
 | settings.toml file | [settings toml file](#settings-toml-file "settings toml file") |
 
 * [Top](#go-big "Top")<br>
 I am following instructions here
 - https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/overview
-
+- https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset 
 
 I am using the latest *.uf2 from https://circuitpython.org/board/adafruit_qualia_s3_rgb666/
 - Choose your board from https://circuitpython.org/downloads to get latest download
@@ -50,25 +55,13 @@ Use the CircUp tool to update the libraries, or else copy the entire new Adafrui
 
 ### Settings toml File
 * [Top](#go-big "Top")<br>
-https://docs.circuitpython.org/en/latest/docs/environment.html
-
 Should probably set the following in **settings.toml** file; enclose strings within double-quotes ""
+- https://docs.circuitpython.org/en/latest/docs/environment.html
 
-CIRCUITPY_WEB_API_PASSWORD
-- Password required to make modifications to the board from the Web Workflow.
-  - I just set this to nonsense so it won't connect
-
-CIRCUITPY_WIFI_PASSWORD
-- Wi-Fi password used to auto connect to CIRCUITPY_WIFI_SSID.
-
-CIRCUITPY_WIFI_SSID
-- Wi-Fi SSID to auto-connect to even if user code is not running.
-
-CIRCUITPY_HEAP_START_SIZE - undocumented
-- size of heap at startup
-- for qualia CIRCUITPY_HEAP_START_SIZE=3072000 seems good, but usually not needed
-
-CIRCUITPY_PYSTACK_SIZE - undocumented
-- size of stack at startup
-- for qualia CIRCUITPY_PYSTACK_SIZE=4000 seems good, but usually not needed
-
+| Parameter | Description | Comments |
+| --- | --- | ---  |
+| CIRCUITPY_WEB_API_PASSWORD | Password required to make modifications to the board from the Web Workflow | I just set this to nonsense so it won't connect |
+| CIRCUITPY_WIFI_PASSWORD | Wi-Fi password used to auto connect to CIRCUITPY_WIFI_SSID | None |
+| CIRCUITPY_WIFI_SSID | Wi-Fi SSID to auto-connect to even if user code is not running | None |
+| CIRCUITPY_HEAP_START_SIZE | size of heap at startup | for qualia 3072000 seems good, but usually not needed |
+| CIRCUITPY_PYSTACK_SIZE | size of stack at startup | for qualia 4000 seems good, but usually not needed |
