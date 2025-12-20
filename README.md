@@ -36,7 +36,7 @@ Here is the Snow Globe in the tree<br>
   * [Potential Next Version ideas](#potential-next-version-ideas "Potential Next Version ideas")
 * [Parts List](#parts-list "Parts List")
 * [Go Big - 2.1 inch Round Display](#go-big-\--21-inch-round-display "Go Big - 2.1 inch Round Display")
-* [References](#references "References")
+* [References for Circuit Playground Bluefruit and TFT Gizmo](#references-for-circuit-playground-bluefruit-and-tft-gizmo "References for Circuit Playground Bluefruit and TFT Gizmo")
   * [From Nordic](#from-nordic "From Nordic")
   * [From Adafruit](#from-adafruit "From Adafruit")
     * [Circuit Playground Bluefruit - Bluetooth Low Energy](#circuit-playground-bluefruit-\--bluetooth-low-energy "Circuit Playground Bluefruit - Bluetooth Low Energy")
