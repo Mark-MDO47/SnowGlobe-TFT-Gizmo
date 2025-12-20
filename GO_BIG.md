@@ -1,20 +1,6 @@
 # GO BIG
 
-I decided to make a bigger version of the Snow Globe based on the following hardware:
-
-| Hardware | Description | URL |
-| --- | --- | --- |
-| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
-| 2.1 inch 480x480 Cap Display | TFT round display | https://www.adafruit.com/product/5792 |
-| Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
-| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-MicroB) | USB cable | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
-| USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
-
-
-Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
-
-I had previously done some experiments with the electronics combination here and had no memory problems doing succesive images.
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display
+I decided to make a bigger version of the Snow Globe
 
 **Table Of Contents**
 * [Top](#go-big "Top")
@@ -92,3 +78,16 @@ Should probably set the following in **settings.toml** file; enclose strings wit
 | CIRCUITPY_WIFI_SSID | Wi-Fi SSID to auto-connect to even if user code is not running | None |
 | CIRCUITPY_HEAP_START_SIZE | size of heap at startup | for qualia 3072000 seems good, but usually not needed |
 | CIRCUITPY_PYSTACK_SIZE | size of stack at startup | for qualia 4000 seems good, but usually not needed |
+
+## Parts List
+* [Top](#go-big "Top")<br>
+
+| Hardware | Description | URL |
+| --- | --- | --- |
+| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
+| 2.1 inch 480x480 Cap Display | TFT round display | https://www.adafruit.com/product/5792 |
+| Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
+| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-MicroB) | USB cable | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
+| USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
+
+Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
