@@ -21,6 +21,8 @@ from adafruit_qualia.graphics import Displays, Graphics
 import io
 import os
 
+G_WHICH_IMAGE = 0 # index of which bin file to use next
+
 ############################################################
 # within_region(x,y, region)
 #
@@ -64,11 +66,9 @@ def color_region(bitmap, color, region):
 #              arranged width-first then height
 #              RGB 565 in big-endian format, two bytes per pixel
 # numPxls - total number of pixels expected in *.bin file
+# img_565 - RGB 565 pixels, arranged per .bin file which is width-first
 #
-# returns  img_565 - RGB 565 pixels, arranged per .bin file which is width-first
-
-def rd_dotbin_file(fname, numPxls):
-    img_565 = [0]*numPxls # make sure we have room
+def rd_dotbin_file(fname, numPxls, img_565):
     fptr = io.open(fname,'rb')
     ba = bytearray(fptr.read())
     fptr.close()
@@ -85,152 +85,97 @@ def rd_dotbin_file(fname, numPxls):
     # end rd_dotbin_file()
 
 ############################################################
-# refresh_right_screen(bitmap, list_of_bin, palette_width, wd, ht, hotspot)
+# load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht, img_565)
 #
 # INPUTS:
-#    bitmap        - RGB 565 that refreshes into the screen; width-first then height
-#    list_of_bin   - list of paths to *.bin files to display
-#    palette_width - width of the color palette on the left, in pixels
-#    wd, ht        - total width and height of the screen bitmap area
-#    hotspot       - control that cuases another call to this routine
+#    bitmap         - RGB 565 that refreshes into the screen; width-first then height
+#    list_of_bin    - list of paths to *.bin files to display
+#    skipleft_width - width of the color palette on the left, in pixels
+#    wd, ht         - total width and height of the screen bitmap area
+#    img_565        - type=list; buffer for the matched set of pixels, arranged width-first
 #
 # INFO:
-#    left half of screen is first palette_width pixels
-#    right have of screen is from coordinate (wd-palette_width) to wd
+#    left half of screen is first skipleft_width pixels
+#    right have of screen is from coordinate (wd-skipleft_width) to wd
 #    total screen is wd width by ht height pixels
-#    img_565 is the matched set of pixels, arranged width-first
 #
 # GLOBAL:
-#    which_bin contains index within list_of_bin to use for display
+#    G_WHICH_IMAGE contains index within list_of_bin to use for display
 #
-which_bin = 0 # index of which bin file to use next
-def refresh_right_screen(bitmap, list_of_bin, palette_width, wd, ht, hot_spot):
-    global which_bin
-    # get img_565 and prepare which_bin for next call
-    img_565 = rd_dotbin_file(list_of_bin[which_bin], (wd-palette_width)*ht)
-    which_bin += 1
-    if which_bin >= len(list_of_bin):
-        which_bin = 0
+def load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht):
+    global G_WHICH_IMAGE
+    # get img_565 and prepare G_WHICH_IMAGE for next call
+    img_565 = rd_dotbin_file(list_of_bin[G_WHICH_IMAGE], (wd-skipleft_width)*ht)
+    print("        img_565_type = %s" % type(img_565)) # DEBUG
+    print("          len = %d" % len(img_565))
+    print("\n\n\n\n")
+    while True:
+        pass
+    G_WHICH_IMAGE += 1
+    if G_WHICH_IMAGE >= len(list_of_bin):
+        G_WHICH_IMAGE = 0
     # copy img_565 into left half of bitmap
-    for i in range(palette_width,wd):
+    for i in range(skipleft_width,wd):
         for j in range(ht):
             """
             # debug checking code
-            if (i < palette_width) or (i > wd):
+            if (i < skipleft_width) or (i > wd):
                 raise RuntimeError("i(%d) out of range." % i)
             if (j < 0) or (j > ht):
                 raise RuntimeError("j(%d) out of range." % j)
-            if ((i - palette_width + j*(wd-palette_width)) < 0) or ((i - palette_width + j*(wd-palette_width)) >= numPxls):
-                raise RuntimeError("i(%d) j(%d) calc(%d) out of range." % (i, j, i + j*(wd-palette_width)))
+            if ((i - skipleft_width + j*(wd-skipleft_width)) < 0) or ((i - skipleft_width + j*(wd-skipleft_width)) >= numPxls):
+                raise RuntimeError("i(%d) j(%d) calc(%d) out of range." % (i, j, i + j*(wd-skipleft_width)))
             """
-            bitmap[i, j] = img_565[i - palette_width + j*(wd-palette_width)]
-    # color the hot_spot black
-    color_region(bitmap, 0, hot_spot)
-    # end refresh_right_screen()
+            bitmap[i, j] = img_565[i - skipleft_width + j*(wd-skipleft_width)]
+    # end load_bitmap()
 
-"""
-# %%%%%%%%%%% THIS IS FOR C-LANGUAGE *.H FILE %%%%%%%%%%%
 ############################################################
-# img_565 = rd_doth_file(fname, numPxls)
-#
-# THIS IS FOR C-LANGUAGE *.H FILE
-#
-def rd_doth_file(fname, numPxls):
-    img_565 = [0]*numPxls # make sure we have room
-    fptr = io.open(fname,'rt')
-    a_line = fptr.readline()
-    foundPxls = -1
-    while 0 != len(a_line):
-        if -1 == foundPxls:
-            if -1 != a_line.find("= {"):
-                foundPxls = 0
-        elif foundPxls < numPxls:
-            here = 0
-            while -1 != a_line[here:].find("0x"):
-               tmp = 2 + a_line[here:].find("0x")
-               img_565[foundPxls] = int(a_line[here+tmp:here+tmp+4],16)
-               foundPxls += 1
-               here += tmp
-        else:
-            break
-        a_line = fptr.readline()
-    fptr.close()
-    if foundPxls != numPxls:
-        raise RuntimeError("pxl found=%d expected %d." % (foundPxls,numPxls))
-    return img_565
-    # end rd_doth_file()
-"""
-
-# For other displays:
-# 2.1" Round = Displays.ROUND21
-# 3.4" Square = Displays.SQUARE34
-# 320 x 820 Bar - Displays.BAR320X820
-graphics = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
-
-
-# if graphics.touch is None:
-#     raise RuntimeError("This example requires a touch screen.")
-
 # Main Program
-pixel_size = 6
-palette_width = 160
-palette_height = graphics.display.height // 8
+def main():
+    # For other displays:
+    # 2.1" Round = Displays.ROUND21
+    # 3.4" Square = Displays.SQUARE34
+    # 320 x 820 Bar - Displays.BAR320X820
+    graphics = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
 
-# hot spot is bottom middle this wide
-hot_spot_x_bgn = palette_width
-hot_spot_x_end = 2*palette_width
-hot_spot_y_bgn = graphics.display.height - palette_height
-hot_spot_y_end = graphics.display.height
-hot_spot = (hot_spot_x_bgn, hot_spot_x_end, hot_spot_y_bgn, hot_spot_y_end)
+    # prepare to read image map
+    numPxls = graphics.display.width * graphics.display.height # 480 * 480 - make sure we have room
 
-# prepare to read my image map
-numPxls = (graphics.display.width - palette_width) * graphics.display.height # (480 - 160) * 480 - make sure we have room
+    # create buffer and don't let it go - don't want memory fragmentation
+    img_565 = [0]*numPxls # make sure we have room
 
-"""
-img_565 = rd_dotbin_file("pix/mdo_goggle_565_lc160_320x480.bin", numPxls)
-"""
-pix_files = os.listdir("pix")
-list_of_bin = []
-for a_fn in pix_files:
-   if (len(a_fn) > 4) and ((a_fn.rfind(".bin") + len(".bin")) == len(a_fn)):
-       list_of_bin.append("pix" + os.sep + a_fn)
+    pix_files = os.listdir("pix")
+    list_of_bin = []
+    for a_fn in pix_files:
+       if (len(a_fn) > 4) and ((a_fn.rfind(".bin") + len(".bin")) == len(a_fn)):
+           list_of_bin.append("pix" + os.sep + a_fn)
 
-bitmap = displayio.Bitmap(graphics.display.width, graphics.display.height, 65535)
+    bitmap = displayio.Bitmap(graphics.display.width, graphics.display.height, 65535)
 
-# Create a TileGrid to hold the bitmap
-tile_grid = displayio.TileGrid(
-    bitmap,
-    pixel_shader=displayio.ColorConverter(input_colorspace=displayio.Colorspace.RGB565),
-)
+    # Create a TileGrid to hold the bitmap
+    tile_grid = displayio.TileGrid(
+        bitmap,
+        pixel_shader=displayio.ColorConverter(input_colorspace=displayio.Colorspace.RGB565)
+    )
 
-# Add the TileGrid to the Group
-graphics.root_group.append(tile_grid)
+    # Add the TileGrid to the Group
+    graphics.root_group.append(tile_grid)
 
-# Add the Group to the Display
-graphics.display.root_group = graphics.root_group
+    # Add the Group to the Display
+    graphics.display.root_group = graphics.root_group
 
-current_color = displayio.ColorConverter().convert(0xFFFFFF)
+    current_color = displayio.ColorConverter().convert(0xFFFFFF)
 
-# display next image map
-refresh_right_screen(bitmap, list_of_bin, palette_width, graphics.display.width, graphics.display.height, hot_spot)
+    # cycle through images
+    load_bitmap(bitmap, list_of_bin, 0, graphics.display.width, graphics.display.height, img_565)
 
-for i in range(palette_width):
-    color_index = i * 255 // palette_width
-    rgb565 = displayio.ColorConverter().convert(color_index | color_index << 8 | color_index << 16)
-    r_mask = 0xF800
-    g_mask = 0x07E0
-    b_mask = 0x001F
-    for j in range(palette_height):
-        bitmap[i, j + palette_height] = rgb565 & b_mask
-        bitmap[i, j + palette_height * 2] = rgb565 & (b_mask | g_mask)
-        bitmap[i, j + palette_height * 3] = rgb565 & g_mask
-        bitmap[i, j + palette_height * 4] = rgb565 & (r_mask | g_mask)
-        bitmap[i, j + palette_height * 5] = rgb565 & r_mask
-        bitmap[i, j + palette_height * 6] = rgb565 & (r_mask | b_mask)
-        bitmap[i, j + palette_height * 7] = rgb565
 
-graphics.display.auto_refresh = True
-print("here I am")
+    graphics.display.auto_refresh = True
+    print("here I am")
 
-while True:
-    pass
+    while True:
+        pass
+
+
+if __name__ == "__main__":
+    main()
