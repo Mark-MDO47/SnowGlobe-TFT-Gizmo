@@ -11,8 +11,10 @@ I decided to make a bigger version of the Snow Globe
 * [Parts List](#parts-list "Parts List")
 
 ## The Plan
-* [Top](#go-big "Top")<br>
+[Top](#go-big "Top")<br>
 
+### Starting Point - qualia_paint.py and tablegen.py
+[Top](#go-big "Top")<br>
 I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 
@@ -25,12 +27,17 @@ The original Adafruit **qualia_paint.py** can be found here:
 The original Adafruit **tablegen.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 
-
 When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
 
 I modified **mdo_tablegen.py** to also create a **.bin** file that is a big-endian version of the data in raw binary. It now takes about 15 seconds to boot **mdo_qualia_paint.py** reading this **.bin** file.
 
-This **mdo_tablegen.py** will work for the Snow Globe project too. It will take longer to load the **.bin** since we will not be cropping off 1/3 of the picture. Maybe I will make it not write all the pixels that are not actually on the round display to speed things up.
+This **mdo_tablegen.py** will work for the Snow Globe project too.
+
+### mdo_big_round_ornament.py
+[Top](#go-big "Top")<br>
+I decided to call this program **mdo_big_round_ornament.py**
+
+It now takes longer (25 seconds) to load the **.bin** since we don't crop off 1/3 of the picture. Maybe I will make mdo_big_round_ornament not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
 
 ## Circuit Python First Steps
 * [Top](#go-big "Top")<br>
@@ -44,7 +51,6 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 | UF2 Bootloader details | https://learn.adafruit.com/adafruit-hallowing/uf2-bootloader-details |
 | settings.toml file | [settings toml file](#settings-toml-file "settings toml file") |
 
-* [Top](#go-big "Top")<br>
 I am following instructions here
 - https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/overview
 - https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset 
@@ -60,7 +66,7 @@ I downloaded the **MU** editor as per instructions. It connected up to the ESP32
 Looks like sometimes I need to reset after saving new code MU.
 
 ### CircUp tool for libraries
-* [Top](#go-big "Top")<br>
+[Top](#go-big "Top")<br>
 
 https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries
 
@@ -68,7 +74,7 @@ Use the CircUp tool to update the libraries, or else copy the entire new Adafrui
 - https://learn.adafruit.com/keep-your-circuitpython-libraries-on-devices-up-to-date-with-circup/usage
 
 ### Settings toml File
-* [Top](#go-big "Top")<br>
+[Top](#go-big "Top")<br>
 
 Should probably set the following in **settings.toml** file; enclose strings within double-quotes ""
 - https://docs.circuitpython.org/en/latest/docs/environment.html
@@ -82,8 +88,7 @@ Should probably set the following in **settings.toml** file; enclose strings wit
 | CIRCUITPY_PYSTACK_SIZE | size of stack at startup | for qualia 4000 seems good, but usually not needed |
 
 ## Parts List
-* [Top](#go-big "Top")<br>
-
+[Top](#go-big "Top")<br>
 | Hardware | Description | URL |
 | --- | --- | --- |
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
