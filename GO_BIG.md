@@ -39,7 +39,15 @@ This **mdo_tablegen.py** will work for the Snow Globe project too.
 [Top](#go-big "Top")<br>
 I decided to call this program **mdo_big_round_ornament.py**
 
-It now takes longer (25 seconds) to load the **.bin** since we don't crop off 1/3 of the picture. Maybe I will make mdo_big_round_ornament not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
+#### Performance
+[Top](#go-big "Top")<br>
+It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive.
+
+Maybe I will make **mdo_big_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
+
+#### Memory
+[Top](#go-big "Top")<br>
+I am creating the list ([]) img_565 early on and keeping it in scope so we don't fragment RAM by allocating it over and over.
 
 ## Circuit Python First Steps
 * [Top](#go-big "Top")<br>
