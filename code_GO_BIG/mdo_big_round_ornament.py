@@ -58,7 +58,7 @@ def color_region(bitmap, color, region):
     # end color_region()
 
 ############################################################
-# img_565 = rd_dotbin_file(fname, numPxls)
+# rd_dotbin_file(fname, numPxls, img_565)
 #
 # THIS IS FOR BIG-ENDIAN BINARY FILE
 #
@@ -66,7 +66,7 @@ def color_region(bitmap, color, region):
 #              arranged width-first then height
 #              RGB 565 in big-endian format, two bytes per pixel
 # numPxls - total number of pixels expected in *.bin file
-# img_565 - RGB 565 pixels, arranged per .bin file which is width-first
+# img_565 - buffer for RGB 565 pixels, arranged per .bin file which is width-first
 #
 def rd_dotbin_file(fname, numPxls, img_565):
     fptr = io.open(fname,'rb')
@@ -80,8 +80,6 @@ def rd_dotbin_file(fname, numPxls, img_565):
     for i, j in enumerate(range(0,foundPxls*2,2)):
         img_565[i] = int(ba[j]<<8) | int(ba[j+1])
     del ba
-
-    return img_565
     # end rd_dotbin_file()
 
 ############################################################
@@ -102,15 +100,10 @@ def rd_dotbin_file(fname, numPxls, img_565):
 # GLOBAL:
 #    G_WHICH_IMAGE contains index within list_of_bin to use for display
 #
-def load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht):
+def load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht, img_565):
     global G_WHICH_IMAGE
     # get img_565 and prepare G_WHICH_IMAGE for next call
-    img_565 = rd_dotbin_file(list_of_bin[G_WHICH_IMAGE], (wd-skipleft_width)*ht)
-    print("        img_565_type = %s" % type(img_565)) # DEBUG
-    print("          len = %d" % len(img_565))
-    print("\n\n\n\n")
-    while True:
-        pass
+    rd_dotbin_file(list_of_bin[G_WHICH_IMAGE], (wd-skipleft_width)*ht, img_565)
     G_WHICH_IMAGE += 1
     if G_WHICH_IMAGE >= len(list_of_bin):
         G_WHICH_IMAGE = 0
