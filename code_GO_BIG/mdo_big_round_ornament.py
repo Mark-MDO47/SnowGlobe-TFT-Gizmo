@@ -14,12 +14,20 @@ Simple painting demo that works with on any touch display
 #
 # To make a Christmas ornament, modified again
 #    removed touch controls
+#    save img_565 (type list) in scope at all times so it doesn't fragment memory, also it is background image
+#
 
 
 import displayio
 from adafruit_qualia.graphics import Displays, Graphics
 import io
 import os
+import time
+
+TIME_TILL_NEXT_BG = 200            # time in seconds till load next background
+NUM_FLAKES = 50                    # total number of snowflakes
+SIZE_FLAKE = 6                     # size of square for pixels
+SNOW_COLOR = 0xFFFFFF              # snow color
 
 G_WHICH_IMAGE = 0 # index of which bin file to use next
 
@@ -159,15 +167,18 @@ def main():
 
     current_color = displayio.ColorConverter().convert(0xFFFFFF)
 
-    # cycle through images
+    # load first image
     load_bitmap(bitmap, list_of_bin, 0, graphics.display.width, graphics.display.height, img_565)
 
 
     graphics.display.auto_refresh = True
-    print("here I am")
 
+    start_time = time.monotonic() # time in seconds
     while True:
-        pass
+        if (time.monotonic() - start_time) > TIME_TILL_NEXT_BG:
+            # cycle through images
+            load_bitmap(bitmap, list_of_bin, 0, graphics.display.width, graphics.display.height, img_565)
+            start_time = time.monotonic() # time in seconds
 
 
 if __name__ == "__main__":
