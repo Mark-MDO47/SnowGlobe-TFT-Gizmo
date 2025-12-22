@@ -51,7 +51,7 @@ Maybe I will make **mdo_big_round_ornament** not write all the pixels that are n
 ### Memory
 [Top](#go-big "Top")<br>
 I am creating the list ([]) img_565 early on and keeping it in scope so we don't fragment RAM by allocating/deallocating it over and over.
-- This stores the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
+- This retains the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
 
 ### 01 - Test of Memory Usage Robustness
 [Top](#go-big "Top")<br>
