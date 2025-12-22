@@ -6,13 +6,14 @@ I decided to make a bigger version of the Snow Globe
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
   * [Starting Point - qualia_paint.py and tablegen.py](#starting-point-\--qualia_paintpy-and-tablegenpy "Starting Point - qualia_paint.py and tablegen.py")
-  * [mdo_big_round_ornament.py](#mdo_big_round_ornamentpy "mdo_big_round_ornament.py")
-    * [Performance](#performance "Performance")
-    * [Memory](#memory "Memory")
-* [Circuit Python First Steps](#circuit-python-first-steps "Circuit Python First Steps")
+* [mdo_big_round_ornament.py](#mdo_big_round_ornamentpy "mdo_big_round_ornament.py")
+  * [Performance](#performance "Performance")
+  * [Memory](#memory "Memory")
+  * [01 - Test of Memory Usage Robustness](#01-\--test-of-memory-usage-robustness "01 - Test of Memory Usage Robustness")
+* [Parts List](#parts-list "Parts List")
+* [First Steps - Factory Reset and Install Circuit Python](#first-steps-\--factory-reset-and-install-circuit-python "First Steps - Factory Reset and Install Circuit Python")
   * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
   * [Settings toml File](#settings-toml-file "Settings toml File")
-* [Parts List](#parts-list "Parts List")
 
 ## The Plan
 [Top](#go-big "Top")<br>
