@@ -4,7 +4,7 @@ My build of the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
 Also - **GO BIG**<br>
-I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+The TFT-Gizmo has a 1.54" 240x240 IPS display. I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
 Back to **Circuit Playground TFT Gizmo**<br>
@@ -19,7 +19,7 @@ Here are some images after implementing the above.
 
 | neither confirm nor deny | pancakes in the morning | wedding | Go Big |
 | --- | --- | --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="400" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="400" alt="Making pancakes in the morning"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Wedding.jpg" width="400" alt="At the wedding altar"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="400" alt="Go Big Snowglobe on table - smudged to protect the guilty"> |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="400" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="400" alt="Making pancakes in the morning"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Wedding.jpg" width="400" alt="At the wedding altar"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="533" alt="Go Big Snowglobe on table - smudged to protect the guilty"> |
 
 Here is the Snow Globe in the tree<br>
 | in the tree - catamaran | in the tree - Christmas |
