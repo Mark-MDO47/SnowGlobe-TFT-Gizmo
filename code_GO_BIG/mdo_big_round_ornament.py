@@ -28,7 +28,7 @@ import io
 import os
 import time
 
-GC_TIME_TILL_NEXT_BG = 200            # time in seconds till load next background
+GC_TIME_TILL_NEXT_BG = 120            # time in seconds till load next background
 GC_SNOW_COLOR = 0xFFFF                # snow color
 GC_NUM_FLAKES = 70                    # total number of snowflakes
 GC_MAX_SIZE_FLAKE = 6                 # max size of square for pixels
@@ -165,7 +165,7 @@ def move_snow(bitmap, wd, ht, img_565):
     for flake_idx in range(GC_NUM_FLAKES):
         restore_region(bitmap, img_565, G_FLAKE_REGIONS[flake_idx], wd, ht)
         x_bgn, x_end, y_bgn, y_end = G_FLAKE_REGIONS[flake_idx]
-        down = max((y_end - y_bgn) // GC_MIN_SIZE_FLAKE, GC_MIN_SIZE_FLAKE)
+        down = max(((y_end - y_bgn) * 2) // GC_MIN_SIZE_FLAKE, GC_MIN_SIZE_FLAKE)
         y_bgn_moved = y_bgn + down
         y_end_moved = min(y_end+down, ht-1)
         if ((y_bgn_moved+1) >= y_end_moved):
@@ -274,6 +274,7 @@ def main():
     for a_fn in pix_files:
        if (len(a_fn) > 4) and ((a_fn.rfind(".bin") + len(".bin")) == len(a_fn)):
            list_of_bin.append("pix" + os.sep + a_fn)
+    list_of_bin = sorted(list_of_bin)
 
     # create the bitmap for the display
     bitmap = displayio.Bitmap(G_GRAPHICS.display.width, G_GRAPHICS.display.height, 65535)
