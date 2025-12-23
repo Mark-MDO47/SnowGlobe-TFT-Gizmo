@@ -12,24 +12,34 @@ Simple painting demo that works with on any touch display
 #    modified by me https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 #       now uses binary file for image load, can load one image after another
 #
+# This code now includes concepts and some code from the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
+#       https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
+#
 # To make a Christmas ornament, modified again
 #    removed touch controls
 #    save img_565 (type list) in scope at all times so it doesn't fragment memory, also it is background image
 #
 
 
+from random import randrange
 import displayio
 from adafruit_qualia.graphics import Displays, Graphics
 import io
 import os
 import time
 
-TIME_TILL_NEXT_BG = 200            # time in seconds till load next background
-NUM_FLAKES = 50                    # total number of snowflakes
-SIZE_FLAKE = 6                     # size of square for pixels
-SNOW_COLOR = 0xFFFFFF              # snow color
+GC_TIME_TILL_NEXT_BG = 200            # time in seconds till load next background
+GC_SNOW_COLOR = 0xFFFF                # snow color
+GC_NUM_FLAKES = 50                    # total number of snowflakes
+GC_MAX_SIZE_FLAKE = 6                 # max size of square for pixels
+GC_MIN_SIZE_FLAKE = 2                 # max size of square for pixels
 
-G_WHICH_IMAGE = 0 # index of which bin file to use next
+G_GRAPHICS = None
+
+# get these structures defined so always in scope to avoid memory fragmentation
+G_FLAKE_REGIONS = [[0 for _ in range(4)] for _ in range(GC_NUM_FLAKES)] # region of this flake
+
+G_WHICH_IMAGE = 0 # index of which .bin file to use as next background
 
 ############################################################
 # within_region(x,y, region)
@@ -66,15 +76,120 @@ def color_region(bitmap, color, region):
     # end color_region()
 
 ############################################################
+# restore_region(bitmap, img_565, region, wd, ht)
+#
+# INPUTS:
+#    bitmap - RGB 565 that refreshes into the screen; width-first then height
+#    region - indexes to bitmap: (x_bgn, x_end, y_bgn, y_end)
+#    wd, ht         - total width and height of the screen bitmap area
+#    img_565 - buffer for RGB 565 pixels, arranged per .bin file which is width-first
+#
+def restore_region(bitmap, img_565, region, wd, ht):
+    x_bgn, x_end, y_bgn, y_end = region
+    for i in range(x_bgn, x_end):
+        for j in range(y_bgn, y_end):
+            bitmap[i, j] = img_565[i + j*wd]
+    # end restore_region()
+
+############################################################
+# start_snow(bitmap, wd, ht)
+#    puts initial set of snowflakes onto background
+#
+# INPUTS:
+#    bitmap - RGB 565 that refreshes into the screen; width-first then height
+#    wd, ht         - total width and height of the screen bitmap area
+#
+# GLOBAL CONSTANTS:
+#    GC_MAX_SIZE_FLAKE - maximum size of flake in pixels
+#    GC_MIN_SIZE_FLAKE - minimum size of flake in pixels
+#    GC_NUM_FLAKES     - total number of snowflakes
+#    GC_SNOW_COLOR     - snow color
+#
+# GLOBAL STRUCTURES:
+#    G_FLAKE_REGIONS   - x,y position of this flake
+#
+def create_flake_region(bitmap, wd, ht):
+    x_bgn = randrange(0,wd)
+    y_bgn = randrange(0,ht)
+    size = randrange(GC_MIN_SIZE_FLAKE, GC_MAX_SIZE_FLAKE+1)
+    x_end = min(x_bgn+size,wd-1)
+    y_end = min(y_bgn+size,ht-1)
+    return [x_bgn, x_end, y_bgn, y_end]
+    # end create_flake_region()
+
+############################################################
+# start_snow(bitmap, wd, ht)
+#    puts initial set of snowflakes onto background
+#
+# INPUTS:
+#    bitmap - RGB 565 that refreshes into the screen; width-first then height
+#    wd, ht         - total width and height of the screen bitmap area
+#
+# GLOBAL CONSTANTS:
+#    GC_MAX_SIZE_FLAKE - maximum size of flake in pixels
+#    GC_MIN_SIZE_FLAKE - minimum size of flake in pixels
+#    GC_NUM_FLAKES     - total number of snowflakes
+#    GC_SNOW_COLOR     - snow color
+#
+# GLOBAL STRUCTURES:
+#    G_FLAKE_REGIONS   - x,y position of this flake
+#
+def start_snow(bitmap, wd, ht):
+    global G_FLAKE_REGIONS
+
+    for flake_idx in range(GC_NUM_FLAKES):
+        G_FLAKE_REGIONS[flake_idx] = create_flake_region(bitmap, wd, ht)
+        color_region(bitmap, GC_SNOW_COLOR, G_FLAKE_REGIONS[flake_idx])
+    # end start_snow()
+
+############################################################
+# move_snow(bitmap, wd, ht, img_565)
+#    lets snow fall down a bit
+#
+# INPUTS:
+#    bitmap  - RGB 565 that refreshes into the screen; width-first then height
+#    wd, ht  - total width and height of the screen bitmap area
+#    img_565 - buffer for RGB 565 pixels, arranged per .bin file which is width-first
+#
+# GLOBAL CONSTANTS:
+#    GC_NUM_FLAKES     - total number of snowflakes
+#    GC_SNOW_COLOR     - snow color
+#    GC_MIN_SIZE_FLAKE - minimum size of flake in pixels
+#
+# GLOBAL STRUCTURES:
+#    G_FLAKE_REGIONS   - x,y position of this flake
+#
+def move_snow(bitmap, wd, ht, img_565):
+    global G_FLAKE_REGIONS
+
+    for flake_idx in range(GC_NUM_FLAKES):
+        restore_region(bitmap, img_565, G_FLAKE_REGIONS[flake_idx], wd, ht)
+        x_bgn, x_end, y_bgn, y_end = G_FLAKE_REGIONS[flake_idx]
+        down = (y_end - y_bgn) // GC_MIN_SIZE_FLAKE
+        y_bgn_moved = y_bgn + down
+        y_end_moved = min(y_end+down, ht)
+        if (y_bgn_moved >= y_end_moved):
+            G_FLAKE_REGIONS[flake_idx] = create_flake_region(bitmap, wd, ht)
+        else:
+            G_FLAKE_REGIONS[flake_idx] = [x_bgn, x_end, y_bgn_moved, y_end_moved]
+        color_region(bitmap, GC_SNOW_COLOR, G_FLAKE_REGIONS[flake_idx])
+    # end move_snow()
+
+############################################################
 # rd_dotbin_file(fname, numPxls, img_565)
 #
 # THIS IS FOR BIG-ENDIAN BINARY FILE
+#    see https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
+#        for mdo_tablegen.py which can produce these files
+#    The original Adafruit tablegen.py (basis for mdo_tablegen.py) can be found here:
+#        https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 #
-# fname   - path to *.bin file created by mdo_tablegen.py
+# INPUTS:
+#    fname   - path to *.bin file created by mdo_tablegen.py
 #              arranged width-first then height
 #              RGB 565 in big-endian format, two bytes per pixel
-# numPxls - total number of pixels expected in *.bin file
-# img_565 - buffer for RGB 565 pixels, arranged per .bin file which is width-first
+#    numPxls - total number of pixels expected in *.bin file
+#    img_565 - buffer for RGB 565 pixels, arranged per .bin file which is width-first
 #
 def rd_dotbin_file(fname, numPxls, img_565):
     fptr = io.open(fname,'rb')
@@ -132,26 +247,33 @@ def load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht, img_565):
 
 ############################################################
 # Main Program
+#
+# GLOBAL STRUCTURES:
+#    G_GRAPHICS        - Graphics display structure
+#
 def main():
     # For other displays:
     # 2.1" Round = Displays.ROUND21
     # 3.4" Square = Displays.SQUARE34
     # 320 x 820 Bar - Displays.BAR320X820
-    graphics = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
+    G_GRAPHICS = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
 
-    # prepare to read image map
-    numPxls = graphics.display.width * graphics.display.height # 480 * 480 - make sure we have room
+    # prepare to read image map - get number of pixels for our display
+    numPxls = G_GRAPHICS.display.width * G_GRAPHICS.display.height # 480 * 480 - make sure we have room
 
-    # create buffer and don't let it go - don't want memory fragmentation
+    # create pixel buffer for TFT 16-bit values and don't let it go - we don't want memory fragmentation
+    # this buffer is just a Python list
     img_565 = [0]*numPxls # make sure we have room
 
+    # do a directory of /pix and make list of *.bin files
     pix_files = os.listdir("pix")
     list_of_bin = []
     for a_fn in pix_files:
        if (len(a_fn) > 4) and ((a_fn.rfind(".bin") + len(".bin")) == len(a_fn)):
            list_of_bin.append("pix" + os.sep + a_fn)
 
-    bitmap = displayio.Bitmap(graphics.display.width, graphics.display.height, 65535)
+    # create the bitmap for the display
+    bitmap = displayio.Bitmap(G_GRAPHICS.display.width, G_GRAPHICS.display.height, 65535)
 
     # Create a TileGrid to hold the bitmap
     tile_grid = displayio.TileGrid(
@@ -160,26 +282,32 @@ def main():
     )
 
     # Add the TileGrid to the Group
-    graphics.root_group.append(tile_grid)
+    G_GRAPHICS.root_group.append(tile_grid)
 
     # Add the Group to the Display
-    graphics.display.root_group = graphics.root_group
+    G_GRAPHICS.display.root_group = G_GRAPHICS.root_group
 
-    current_color = displayio.ColorConverter().convert(0xFFFFFF)
+    # load the first background image
+    load_bitmap(bitmap, list_of_bin, 0, G_GRAPHICS.display.width, G_GRAPHICS.display.height, img_565)
 
-    # load first image
-    load_bitmap(bitmap, list_of_bin, 0, graphics.display.width, graphics.display.height, img_565)
+    # for now we will just let it auto-refresh and see if that is a problem
+    G_GRAPHICS.display.auto_refresh = True
 
-
-    graphics.display.auto_refresh = True
-
-    start_time = time.monotonic() # time in seconds
+    start_time = time.time() # time in seconds since 1970 as an int
+    #  ESP32 boards should support arbitrarily large integers in CircuitPython
     while True:
-        if (time.monotonic() - start_time) > TIME_TILL_NEXT_BG:
+        if (time.time() - start_time) > GC_TIME_TILL_NEXT_BG:
             # cycle through images
-            load_bitmap(bitmap, list_of_bin, 0, graphics.display.width, graphics.display.height, img_565)
-            start_time = time.monotonic() # time in seconds
-
+            load_bitmap(bitmap, list_of_bin, 0, G_GRAPHICS.display.width, G_GRAPHICS.display.height, img_565)
+            G_GRAPHICS.display.auto_refresh = False
+            start_snow(bitmap, G_GRAPHICS.display.width, G_GRAPHICS.display.height)
+            G_GRAPHICS.display.auto_refresh = True
+            start_time = time.time() # time in seconds
+        else:
+            G_GRAPHICS.display.auto_refresh = False
+            move_snow(bitmap, G_GRAPHICS.display.width, G_GRAPHICS.display.height, img_565)
+            G_GRAPHICS.display.auto_refresh = True
+            G_GRAPHICS.display.refresh()
 
 if __name__ == "__main__":
     main()
