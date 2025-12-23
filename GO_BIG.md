@@ -4,7 +4,7 @@ I decided to make a bigger version of the Snow Globe
 
 | Go Big on the table | Go Big on the tree |
 | --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="400" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
  
 **Table Of Contents**
 * [Top](#go-big "Top")
