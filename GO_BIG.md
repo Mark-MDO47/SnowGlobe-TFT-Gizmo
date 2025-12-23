@@ -2,6 +2,8 @@
 
 I decided to make a bigger version of the Snow Globe
 
+<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="600" alt="Go Big Snowglobe - smudged to protect the guilty">
+
 **Table Of Contents**
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
@@ -48,18 +50,26 @@ It still takes 15 seconds to load the **.bin**; I expected longer since we aren'
 
 Maybe I will make **mdo_big_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
 
+From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
+
+On the other hand, the snow movement is definitely jerky compared to the TFT-Gizmo version.
+
 ### Memory
 [Top](#go-big "Top")<br>
 I am creating the list ([]) img_565 early on and keeping it in scope so we don't fragment RAM by allocating/deallocating it over and over.
 - This retains the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
+- This seems to be working - see below.
 
 ### 01 - Test of Memory Usage Robustness
 [Top](#go-big "Top")<br>
-My hope is that by starting with this code which is closer to the metal, I can avoid the memory problems I had with the TFT-Gizmo version. The problem is my lack of background knowledge in the display routines used. I was just using a shotgun approach to debug it. Admittedly I did find some issues and got it to last through 5 background changes instead of 2, but eventually I just used the reboot option.
+My hope is that by starting with this code which is closer to the metal, I can avoid the memory problems I had with the TFT-Gizmo version.
+- The problem with debugging the TFT-Gizmo version is my lack of background knowledge in the display routines used. I was just using a shotgun approach to debug it. Admittedly I did find some issues and got it to last through 5 background changes instead of 2, but eventually I just used the reboot option.
 
 With **mdo_qualia_paint** I had never noticed this issue. However, the background switches were manually invoked and I had never tested the limits to see if there was a latent problem.
 
 The file **01_RobustnessTest.py** (an early version of mdo_big_round_ornament.py) changes the background every 10 seconds. I ran it for 20 hours and it was still going without a problem.
+
+Now that it is hanging on the tree with snow falling I have not yet seen any indication of a memory problem or other crashing issue.
 
 ## Parts List
 [Top](#go-big "Top")<br>
@@ -68,10 +78,11 @@ The file **01_RobustnessTest.py** (an early version of mdo_big_round_ornament.py
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.1 inch 480x480 Cap Display | TFT round display | https://www.adafruit.com/product/5792 |
 | Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
-| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-MicroB) | USB cable | https://www.amazon.com/Itramax-Charging-Charger-Camera-Controller/dp/B07ZGCV1S1?th=1 |
+| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
-Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
+Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on top of the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
+- For now I just folded it over into one-half of the globe with bubble-wrap to maintain isolation, then used foam and tape to hold it in. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
 
 ## First Steps - Factory Reset and Install Circuit Python
 [Top](#go-big "Top")<br>
