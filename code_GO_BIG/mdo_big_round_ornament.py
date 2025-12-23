@@ -30,9 +30,9 @@ import time
 
 GC_TIME_TILL_NEXT_BG = 200            # time in seconds till load next background
 GC_SNOW_COLOR = 0xFFFF                # snow color
-GC_NUM_FLAKES = 50                    # total number of snowflakes
+GC_NUM_FLAKES = 70                    # total number of snowflakes
 GC_MAX_SIZE_FLAKE = 6                 # max size of square for pixels
-GC_MIN_SIZE_FLAKE = 2                 # max size of square for pixels
+GC_MIN_SIZE_FLAKE = 3                 # max size of square for pixels
 
 G_GRAPHICS = None
 
@@ -165,11 +165,14 @@ def move_snow(bitmap, wd, ht, img_565):
     for flake_idx in range(GC_NUM_FLAKES):
         restore_region(bitmap, img_565, G_FLAKE_REGIONS[flake_idx], wd, ht)
         x_bgn, x_end, y_bgn, y_end = G_FLAKE_REGIONS[flake_idx]
-        down = (y_end - y_bgn) // GC_MIN_SIZE_FLAKE
+        down = max((y_end - y_bgn) // GC_MIN_SIZE_FLAKE, GC_MIN_SIZE_FLAKE)
         y_bgn_moved = y_bgn + down
-        y_end_moved = min(y_end+down, ht)
-        if (y_bgn_moved >= y_end_moved):
-            G_FLAKE_REGIONS[flake_idx] = create_flake_region(bitmap, wd, ht)
+        y_end_moved = min(y_end+down, ht-1)
+        if ((y_bgn_moved+1) >= y_end_moved):
+            x_bgn, x_end, y_bgn, y_end = create_flake_region(bitmap, wd, ht)
+            y_bgn_moved = y_bgn // 8 # put them up near the top
+            y_end_moved = min(y_bgn_moved-y_bgn+y_end, ht-1)
+            G_FLAKE_REGIONS[flake_idx] = [x_bgn, x_end, y_bgn_moved, y_end_moved]
         else:
             G_FLAKE_REGIONS[flake_idx] = [x_bgn, x_end, y_bgn_moved, y_end_moved]
         color_region(bitmap, GC_SNOW_COLOR, G_FLAKE_REGIONS[flake_idx])
@@ -289,6 +292,7 @@ def main():
 
     # load the first background image
     load_bitmap(bitmap, list_of_bin, 0, G_GRAPHICS.display.width, G_GRAPHICS.display.height, img_565)
+    start_snow(bitmap, G_GRAPHICS.display.width, G_GRAPHICS.display.height)
 
     # for now we will just let it auto-refresh and see if that is a problem
     G_GRAPHICS.display.auto_refresh = True
@@ -307,7 +311,7 @@ def main():
             G_GRAPHICS.display.auto_refresh = False
             move_snow(bitmap, G_GRAPHICS.display.width, G_GRAPHICS.display.height, img_565)
             G_GRAPHICS.display.auto_refresh = True
-            G_GRAPHICS.display.refresh()
+        G_GRAPHICS.display.refresh()
 
 if __name__ == "__main__":
     main()
