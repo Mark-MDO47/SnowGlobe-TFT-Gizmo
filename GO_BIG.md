@@ -2,8 +2,10 @@
 
 I decided to make a bigger version of the Snow Globe
 
-<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="600" alt="Go Big Snowglobe - smudged to protect the guilty">
-
+| Go Big on the table | Go Big on the tree |
+| --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="400" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
+ 
 **Table Of Contents**
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
