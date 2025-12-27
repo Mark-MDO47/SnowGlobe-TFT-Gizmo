@@ -78,7 +78,14 @@ I needed a way to get the USB cable into the plastic globe. Ideally I would put 
 
 Eventually I used the slow-speed electric drill and a 7/32 inch pilot hole, followed by a grinding attachment from my Dremel tool again with the slow-speed electric drill to get about a 3/8 inch hole. I finished up with a smaller grinding tool on the actual Dremel tool to slot out the sides. Not pretty, but it fits the cable and it is on the backside of the ornament.
 
-## Software
+## Go Big - 2.1 inch or Go Bigger 2.8 inch Round Display
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+
+See here for my attempts:
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
+
+## Software - TFT Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 See the following to examine the code.py and boot.py I am using.
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code
@@ -115,7 +122,7 @@ I might
 
 When I tried to import the Circuit Playground libraries in addition to the current libraries, I got lots of conflicts. The original code base was started in 2019. Maybe I will just do a complete re-write with the latest libraries.
 
-## Parts List
+## Parts List TFT-Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 | Qty | Description | URL |
 | --- | --- | --- |
@@ -126,13 +133,6 @@ When I tried to import the Circuit Playground libraries in addition to the curre
 | 1 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 | 1 | Ornament hook | https://www.amazon.com/dp/B0G1CNB86G |
 | 1 | 5mm x 20M (0.2in x 65ft) Conductive Cloth Fabric Adhesive Tape (optional for v1.0.0) | https://www.amazon.com/dp/B01ALDR0D0 |
-
-## Go Big - 2.1 inch Round Display
-[Top](#snowglobe-tft\-gizmo "Top")<br>
-I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
-
-See here for my attempts:
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
 ## References for Circuit Playground Bluefruit and TFT Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
