@@ -4,7 +4,11 @@ My build of the Circuit Playground TFT Gizmo Snow Globe by Carter Nelson
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
 Also - **GO BIG**<br>
-The TFT-Gizmo has a 1.54" 240x240 IPS display. I had previously done some experiments with a round 2.1" 480x480 display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+The TFT-Gizmo has a 1.54" 240x240 IPS display. I had previously done some experiments with a round 2.1" 480x480 display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this. I did a more bare-metal approach and didn't have any memory issues - it can run for 20 hours switching backgrounds every 20 seconds and not have memory issues requiring a reboot.
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
+
+And now - **GO BIGGER**<br>
+Adafruit has a 2.8" 480x480 display that I am going to try. See the same
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
 Back to **Circuit Playground TFT Gizmo**<br>
