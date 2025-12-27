@@ -11,6 +11,7 @@ I decided to make a bigger version of the Snow Globe.
 **Table Of Contents**
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
+  * [Hardware for **GO BIG** and **GO BIGGER**](#hardware-for-**go-big**-and-**go-bigger** "Hardware for **GO BIG** and **GO BIGGER**")
   * [Starting Point - qualia_paint.py and tablegen.py](#starting-point-\--qualia_paintpy-and-tablegenpy "Starting Point - qualia_paint.py and tablegen.py")
 * [mdo_big_round_ornament.py](#mdo_big_round_ornamentpy "mdo_big_round_ornament.py")
   * [Performance](#performance "Performance")
