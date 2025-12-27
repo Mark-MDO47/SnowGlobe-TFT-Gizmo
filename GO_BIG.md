@@ -1,6 +1,8 @@
 # GO BIG
 
-I decided to make a bigger version of the Snow Globe
+I decided to make a bigger version of the Snow Globe. 
+- **GO BIG** uses the round 2.1" 480x480 TFT display. I used the touchscreen version since that was what I had in the bin.
+- **GO BIGGER** will use the round 2.8" 480x480 TFT display. This one is not a touchscreen version since in this application we cannot touch the screen.
 
 | Go Big on the table | Go Big on the tree |
 | --- | --- |
@@ -21,6 +23,14 @@ I decided to make a bigger version of the Snow Globe
 
 ## The Plan
 [Top](#go-big "Top")<br>
+
+### Hardware for **GO BIG** and **GO BIGGER**
+[Top](#go-big "Top")<br>
+The display for the 2.1" is found at https://www.adafruit.com/product/5792.
+
+The display for the 2.8" is found at https://www.adafruit.com/product/5852.
+
+It seems probable that I won't have to modify the program at all to switch between these two displays.
 
 ### Starting Point - qualia_paint.py and tablegen.py
 [Top](#go-big "Top")<br>
@@ -75,16 +85,24 @@ Now that it is hanging on the tree with snow falling I have not yet seen any ind
 
 ## Parts List
 [Top](#go-big "Top")<br>
-| Hardware | Description | URL |
+| GO BIG Hardware | Description | URL |
 | --- | --- | --- |
-| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
-| 2.1 inch 480x480 Cap Display | TFT round display | https://www.adafruit.com/product/5792 |
+| 2.1 inch 480x480 Cap Display | TFT round display 2.1" | https://www.adafruit.com/product/5792 |
 | Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
+| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
 Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on top of the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
 - For now I just folded it over into one-half of the globe with bubble-wrap to maintain isolation, then used foam and tape to hold it in. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
+
+| GO BIGGER Hardware | Description | URL |
+| --- | --- | --- |
+| 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
+| Clear Fillable Ornaments Balls 80mm/3.15"<br>OR<br>Clear Fillable Christmas Balls 100mm/4.94" |  Clear Plastic DIY Ornament 3.15 inch<br>OR<br>Clear Plastic DIY Ornament 4 inch | https://www.amazon.com/dp/B0CF2GXVSN<br>OR<br> https://www.amazon.com/dp/B0B2LYCLW6 |
+| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
+| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | [https://www.amazon.com/dp/B0DFPPSPTW&th=1](https://www.amazon.com/dp/B0DFPPSPTW) |
+| USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
 ## First Steps - Factory Reset and Install Circuit Python
 [Top](#go-big "Top")<br>
