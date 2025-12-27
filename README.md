@@ -80,9 +80,11 @@ Eventually I used the slow-speed electric drill and a 7/32 inch pilot hole, foll
 
 ## Go Big 2.1 inch or Go Bigger 2.8 inch Round Display
 [Top](#snowglobe-tft\-gizmo "Top")<br>
-I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this.
+I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this. Also Adafruit has a 2.8" 480x480 display that I am going to try.
 
-See here for my attempts:
+The round 2.1" display version was a big hit! it doesn't have the memory problems that my TFT Gizmo version has.
+
+See here for my the story:
 - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 
 ## Software - TFT Gizmo
