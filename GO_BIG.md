@@ -99,7 +99,7 @@ Note: even though the **GO BIG** display itself is 2.1 inch there is some device
 | GO BIGGER Hardware | Description | URL |
 | --- | --- | --- |
 | 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
-| Clear Fillable Ornaments Balls 80mm/3.15"<br>OR<br>Clear Fillable Christmas Balls 100mm/4.94" |  Clear Plastic DIY Ornament 3.15 inch<br>OR<br>Clear Plastic DIY Ornament 4 inch | https://www.amazon.com/dp/B0CF2GXVSN<br>OR<br> https://www.amazon.com/dp/B0B2LYCLW6 |
+| Clear Fillable Ornaments Balls 80mm/3.15"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br>Clear Fillable Christmas Balls 100mm/3.94" |  Clear Plastic DIY Ornament 3.15 inch<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br>Clear Plastic DIY Ornament 4 inch | https://www.amazon.com/dp/B0CF2GXVSN<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br> https://www.amazon.com/dp/B0B2LYCLW6 |
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | [https://www.amazon.com/dp/B0DFPPSPTW&th=1](https://www.amazon.com/dp/B0DFPPSPTW) |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
