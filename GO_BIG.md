@@ -93,8 +93,8 @@ Now that it is hanging on the tree with snow falling I have not yet seen any ind
 | Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
-Note: even though the display itself is 2.1 inch there is some space around the edge so this ornament ball fits nicely on top of the display. I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
-- For now I just folded it over into one-half of the globe with bubble-wrap to maintain isolation, then used foam and tape to hold it in. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
+Note: even though the **GO BIG** display itself is 2.1 inch there is some device space surrounding the display edge so this ornament ball fits nicely on top of the display. To use the back part of the ornament ball I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
+- For now I just folded the display and ESP32-S3 over into one-half of the globe with bubble-wrap to maintain electrical isolation, then used foam and tape to hold it in. I thought I had destroyed it but it still worked. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
 
 | GO BIGGER Hardware | Description | URL |
 | --- | --- | --- |
