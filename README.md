@@ -63,7 +63,7 @@ As of v1.1.0 for Go Big version:
 - While TRUE:
   - If 200 seconds pass - load next image and restart snowfall
 
-## Preparation of the Electronics
+## Preparation of the TFT Gizmo Electronics
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - First - go here [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")<br>
 - Next - store the **lib** files from the **Project Bundle** (I am in version 10x of CircuitPython) of **Simple Snow Globe** in the original **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson onto your **CIRCUITPY** drive - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe?view=all<br>
