@@ -43,9 +43,11 @@ I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tabl
 
 The original Adafruit **qualia_paint.py** can be found here:
 - https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_examples/qualia_paint__latest_2025-12-19.py
 
-The original Adafruit **tablegen.py** can be found here:
+The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
 When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
 
