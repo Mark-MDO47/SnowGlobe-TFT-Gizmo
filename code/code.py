@@ -40,7 +40,7 @@ import adafruit_lis3dh
 #---| User Config |---------------
 BACKGROUND = "/mdo_%02d.bmp"       # specify color or background BMP file template
 BACKGROUND_RANGE = [1, 14]         # range of numbered background files
-TIME_TILL_NEXT_BG = 300            # time in seconds till load next background
+TIME_TILL_NEXT_BG = 30            # time in seconds till load next background
 NUM_FLAKES = 50                    # total number of snowflakes
 SNOW_COLOR = 0xFFFFFF              # snow color
 SHAKE_THRESHOLD = 27               # shake sensitivity, lower=more sensitive
