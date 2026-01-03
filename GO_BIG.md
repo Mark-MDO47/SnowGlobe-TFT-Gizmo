@@ -9,18 +9,18 @@ I decided to make a bigger version of the Snow Globe.
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
  
 **Table Of Contents**
-* [Top](#go-big "Top")
-* [The Plan](#the-plan "The Plan")
-  * [Hardware for **GO BIG** and **GO BIGGER**](#hardware-for-**go-big**-and-**go-bigger** "Hardware for **GO BIG** and **GO BIGGER**")
-  * [Starting Point - qualia_paint.py and tablegen.py](#starting-point-\--qualia_paintpy-and-tablegenpy "Starting Point - qualia_paint.py and tablegen.py")
-* [mdo_big_round_ornament.py](#mdo_big_round_ornamentpy "mdo_big_round_ornament.py")
-  * [Performance](#performance "Performance")
-  * [Memory](#memory "Memory")
-  * [01 - Test of Memory Usage Robustness](#01-\--test-of-memory-usage-robustness "01 - Test of Memory Usage Robustness")
-* [Parts List](#parts-list "Parts List")
-* [First Steps - Factory Reset and Install Circuit Python](#first-steps-\--factory-reset-and-install-circuit-python "First Steps - Factory Reset and Install Circuit Python")
-  * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
-  * [Settings toml File](#settings-toml-file "Settings toml File")
+- [GO BIG](#go-big)
+  - [The Plan](#the-plan)
+    - [Hardware for **GO BIG** and **GO BIGGER**](#hardware-for-go-big-and-go-bigger)
+    - [Starting Point - qualia\_paint.py and tablegen.py](#starting-point---qualia_paintpy-and-tablegenpy)
+  - [mdo\_big\_round\_ornament.py](#mdo_big_round_ornamentpy)
+    - [Performance](#performance)
+    - [Memory](#memory)
+    - [01 - Test of Memory Usage Robustness](#01---test-of-memory-usage-robustness)
+  - [Parts List](#parts-list)
+  - [First Steps - Factory Reset and Install Circuit Python](#first-steps---factory-reset-and-install-circuit-python)
+    - [CircUp tool for libraries](#circup-tool-for-libraries)
+    - [Settings toml File](#settings-toml-file)
 
 ## The Plan
 [Top](#go-big "Top")<br>
@@ -110,6 +110,15 @@ Note: even though the **GO BIG** display itself is 2.1 inch there is some device
 ## First Steps - Factory Reset and Install Circuit Python
 [Top](#go-big "Top")<br>
 Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
+
+| Step | Description | URL |
+| --- | --- | --- |
+| 1 | Factory Reset | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
+| 2 | FW Update | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/install-uf2-bootloader |
+| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/ |
+| 4 | Install Library Bundle | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries |
+
+
 
 | To Know | Where |
 | --- | --- |
