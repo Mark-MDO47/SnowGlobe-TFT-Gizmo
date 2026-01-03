@@ -118,7 +118,7 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 | 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/ |
 | 4 | Install Library Bundle | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries |
 
-
+After copying entire Adafruit bundle into /lib, there is room for 20 image 480x480 *.bin files.
 
 | To Know | Where |
 | --- | --- |
