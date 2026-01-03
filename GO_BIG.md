@@ -122,8 +122,6 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 
 | To Know | Where |
 | --- | --- |
-| Adafruit Qualia ESP32-S3 for RGB-666 Displays | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays |
-| Adafruit Qualia ESP32-S3 - factory reset | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
 | UF2 Bootloader details | https://learn.adafruit.com/adafruit-hallowing/uf2-bootloader-details |
 | settings.toml file | [settings toml file](#settings-toml-file "settings toml file") |
 | USB drive CIRCUITPY is read-only | Linux: (A) eject CIRCUITPY (B) unplug, delay 5 sec, plug-in Qualia |
