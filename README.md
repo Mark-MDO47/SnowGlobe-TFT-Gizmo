@@ -63,6 +63,7 @@ As of v1.1.0 for Go Big version:
 - While TRUE:
   - If 200 seconds pass - load next image and restart snowfall
 
+NOTE: popular request is to make time 5 seconds between backgrounds
 ## Preparation of the TFT Gizmo Electronics
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - First - go here [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")<br>
