@@ -28,7 +28,7 @@ import io
 import os
 import time
 
-GC_TIME_TILL_NEXT_BG = 30            # time in seconds till load next background
+GC_TIME_TILL_NEXT_BG = 5              # time in seconds till load next background
 GC_SNOW_COLOR = 0xFFFF                # snow color
 GC_NUM_FLAKES = 70                    # total number of snowflakes
 GC_MAX_SIZE_FLAKE = 6                 # max size of square for pixels
