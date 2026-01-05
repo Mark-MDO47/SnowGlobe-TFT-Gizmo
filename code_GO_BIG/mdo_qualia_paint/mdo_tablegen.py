@@ -50,7 +50,7 @@ def do_generate_565_table_bin(image_dir_name, add_progmem, left_chop):
             pass # cannot use ! here, strangely
         else:
             continue
-        input_fname = "%s\\%s" % (image_dir_name, a_fname)
+        input_fname = os.path.join(image_dir_name, a_fname)
         IMAGE = Image.open(input_fname)
         IMAGE = IMAGE.convert('RGB')
         PIXELS = IMAGE.load()
@@ -129,5 +129,5 @@ python mdo_tablegen.py image_dir_name --leftchop=160
     if args.progmem:
         add_progmem = "PROGMEM "
 
-    print("%s progmem=%s lc=%s" % (args.image_dir_name, add_progmem, args.leftchop))
+    # print("%s progmem=%s lc=%s" % (args.image_dir_name, add_progmem, args.leftchop))
     do_generate_565_table_bin(args.image_dir_name, add_progmem, args.leftchop)
