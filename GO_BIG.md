@@ -161,3 +161,8 @@ Should probably set the following in **settings.toml** file; enclose strings wit
 | CIRCUITPY_WIFI_SSID | Wi-Fi SSID to auto-connect to even if user code is not running | None |
 | CIRCUITPY_HEAP_START_SIZE | size of heap at startup | for qualia 3072000 seems good, but usually not needed |
 | CIRCUITPY_PYSTACK_SIZE | size of stack at startup | for qualia 4000 seems good, but usually not needed |
+
+### 2.8 inch Display
+[Top](#go-big "Top")<br>
+This requires specific setup; see example here
+- https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/qualia-rgb666-with-tl028wvc01-2-8-round-display
