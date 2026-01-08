@@ -9,18 +9,19 @@ I decided to make a bigger version of the Snow Globe.
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
  
 **Table Of Contents**
-- [GO BIG](#go-big)
-  - [The Plan](#the-plan)
-    - [Hardware for **GO BIG** and **GO BIGGER**](#hardware-for-go-big-and-go-bigger)
-    - [Starting Point - qualia\_paint.py and tablegen.py](#starting-point---qualia_paintpy-and-tablegenpy)
-  - [mdo\_big\_round\_ornament.py](#mdo_big_round_ornamentpy)
-    - [Performance](#performance)
-    - [Memory](#memory)
-    - [01 - Test of Memory Usage Robustness](#01---test-of-memory-usage-robustness)
-  - [Parts List](#parts-list)
-  - [First Steps - Factory Reset and Install Circuit Python](#first-steps---factory-reset-and-install-circuit-python)
-    - [CircUp tool for libraries](#circup-tool-for-libraries)
-    - [Settings toml File](#settings-toml-file)
+* [Top](#go-big "Top")
+* [The Plan](#the-plan "The Plan")
+  * [Hardware for **GO BIG** and **GO BIGGER**](#hardware-for-**go-big**-and-**go-bigger** "Hardware for **GO BIG** and **GO BIGGER**")
+  * [Starting Point - qualia_paint.py and tablegen.py](#starting-point-\--qualia_paintpy-and-tablegenpy "Starting Point - qualia_paint.py and tablegen.py")
+* [mdo_big_round_ornament.py](#mdo_big_round_ornamentpy "mdo_big_round_ornament.py")
+  * [Performance](#performance "Performance")
+  * [Memory](#memory "Memory")
+  * [01 - Test of Memory Usage Robustness](#01-\--test-of-memory-usage-robustness "01 - Test of Memory Usage Robustness")
+* [Parts List](#parts-list "Parts List")
+* [First Steps - Factory Reset and Install Circuit Python](#first-steps-\--factory-reset-and-install-circuit-python "First Steps - Factory Reset and Install Circuit Python")
+  * [CircUp tool for libraries](#circup-tool-for-libraries "CircUp tool for libraries")
+  * [Settings toml File](#settings-toml-file "Settings toml File")
+  * [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
 ## The Plan
 [Top](#go-big "Top")<br>
