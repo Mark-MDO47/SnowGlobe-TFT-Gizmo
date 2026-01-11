@@ -4,7 +4,7 @@
 Simple painting demo that works with on any touch display
 """
 
-# https://github.com/Mark-MDO47 2025-12-20
+# https://github.com/Mark-MDO47 2026-01-10
 # https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
 #
 # Re-organized to be a  snow-globe ornament
@@ -18,6 +18,12 @@ Simple painting demo that works with on any touch display
 # To make a Christmas ornament, modified again
 #    removed touch controls
 #    save img_565 (type list) in scope at all times so it doesn't fragment memory, also it is background image
+#    add color_region(), restore_region(), start_snow(), move_snow()
+#    update main() to auto-cycle through backgrounds and do the snow displays
+# To make it handle the 2.8" round display
+#    change to use ROUND28 instead of ROUND21
+#    https://forums.adafruit.com/viewtopic.php?p=1034614&hilit=tl028wvc01+2.8+480x480#p1034614
+#        look for: Here's a basic example for the Qualia + 2.8" Round TFT:
 #
 
 
@@ -257,9 +263,10 @@ def load_bitmap(bitmap, list_of_bin, skipleft_width, wd, ht, img_565):
 def main():
     # For other displays:
     # 2.1" Round = Displays.ROUND21
+    # 2.8" Round = Displays.ROUND28
     # 3.4" Square = Displays.SQUARE34
     # 320 x 820 Bar - Displays.BAR320X820
-    G_GRAPHICS = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
+    G_GRAPHICS = Graphics(Displays.ROUND28, default_bg=None, auto_refresh=False)
 
     # prepare to read image map - get number of pixels for our display
     numPxls = G_GRAPHICS.display.width * G_GRAPHICS.display.height # 480 * 480 - make sure we have room

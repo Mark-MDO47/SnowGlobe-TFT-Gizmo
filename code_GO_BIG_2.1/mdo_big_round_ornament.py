@@ -18,6 +18,8 @@ Simple painting demo that works with on any touch display
 # To make a Christmas ornament, modified again
 #    removed touch controls
 #    save img_565 (type list) in scope at all times so it doesn't fragment memory, also it is background image
+#    add color_region(), restore_region(), start_snow(), move_snow()
+#    update main() to auto-cycle through backgrounds and do the snow displays
 #
 
 
@@ -92,7 +94,7 @@ def restore_region(bitmap, img_565, region, wd, ht):
     # end restore_region()
 
 ############################################################
-# start_snow(bitmap, wd, ht)
+# create_flake_region(bitmap, wd, ht)
 #    puts initial set of snowflakes onto background
 #
 # INPUTS:
