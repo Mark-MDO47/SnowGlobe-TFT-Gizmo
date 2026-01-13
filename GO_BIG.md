@@ -174,7 +174,7 @@ There is an example pointed to below that shows that ROUND28 is now an available
 
 This means I can use the 2.8 inch display by changing one line. All the magic initialization and usage of a new controller chip are taken care of automagically.
 
-```
+```python
 <<<2.1 inch display>>>
     G_GRAPHICS = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
 <<<2.8 inch display>>>
