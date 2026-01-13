@@ -36,7 +36,7 @@ Here is the Snow Globe in the tree<br>
 
 **Table Of Contents**
 * [Top](#snowglobe-tft\-gizmo "Top")
-* [v1.1.0 Snow Globe Behavior](#v110-snow-globe-behavior "v1.1.0 Snow Globe Behavior")
+* [Version-Dependent Snow Globe Behavior](#version--dependent-snow-globe-behavior "Version-Dependent Snow Globe Behavior")
 * [Preparation of the TFT Gizmo Electronics](#preparation-of-the-tft-gizmo-electronics "Preparation of the TFT Gizmo Electronics")
 * [Preparation of Plastic Ornament Globe](#preparation-of-plastic-ornament-globe "Preparation of Plastic Ornament Globe")
 * [Go Big 2.1 inch or Go Bigger 2.8 inch Round Display](#go-big-21-inch-or-go-bigger-28-inch-round-display "Go Big 2.1 inch or Go Bigger 2.8 inch Round Display")
@@ -53,7 +53,7 @@ Here is the Snow Globe in the tree<br>
     * [The Big Kahuna - the API registry.](#the-big-kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
   * [Non-Official but Useful](#non\-official-but-useful "Non-Official but Useful")
 
-## v1.1.0 Snow Globe Behavior
+## Version-Dependent Snow Globe Behavior
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 As of V1.54 (TFT Gizmo 1.54 inch display):
 - At startup, a psuedo-random number is used to choose the background image and load it up
