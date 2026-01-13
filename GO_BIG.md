@@ -165,5 +165,18 @@ Should probably set the following in **settings.toml** file; enclose strings wit
 
 ### 2.8 inch Display
 [Top](#go-big "Top")<br>
-This requires specific setup; see example here
+This requires specific setup; see example here (I later found easier ways to do this)
 - https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/qualia-rgb666-with-tl028wvc01-2-8-round-display
+- The above is maybe out of date with latest Circuitpython libraries. It led me down the rabbit hole for about a week.
+
+There is an example pointed to below that shows that ROUND28 is now an available option to Qualia (search for **ROUND28** or **Wed Nov 06, 2024 10:06 am** by adafruit_support_carter
+- https://forums.adafruit.com/viewtopic.php?p=1034614&hilit=tl028wvc01+2.8+480x480#p1034614
+
+This means I can use the 2.8 inch display by changing one line. All the magic initialization and usage of a new controller chip are taken care of automagically.
+
+```
+<<<2.1 inch display>>>
+    G_GRAPHICS = Graphics(Displays.ROUND21, default_bg=None, auto_refresh=False)
+<<<2.8 inch display>>>
+    G_GRAPHICS = Graphics(Displays.ROUND28, default_bg=None, auto_refresh=False)
+```
