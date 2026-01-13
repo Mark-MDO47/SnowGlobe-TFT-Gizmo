@@ -36,7 +36,7 @@ Here is the Snow Globe in the tree<br>
 
 **Table Of Contents**
 * [Top](#snowglobe-tft\-gizmo "Top")
-* [Version-Dependent Snow Globe Behavior](#version--dependent-snow-globe-behavior "Version-Dependent Snow Globe Behavior")
+* [Version-Dependent Snow Globe Behavior](#version\-dependent-snow-globe-behavior "Version-Dependent Snow Globe Behavior")
 * [Preparation of the TFT Gizmo Electronics](#preparation-of-the-tft-gizmo-electronics "Preparation of the TFT Gizmo Electronics")
 * [Preparation of Plastic Ornament Globe](#preparation-of-plastic-ornament-globe "Preparation of Plastic Ornament Globe")
 * [Go Big 2.1 inch or Go Bigger 2.8 inch Round Display](#go-big-21-inch-or-go-bigger-28-inch-round-display "Go Big 2.1 inch or Go Bigger 2.8 inch Round Display")
