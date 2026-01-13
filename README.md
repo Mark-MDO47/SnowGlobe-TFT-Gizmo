@@ -52,18 +52,25 @@ Here is the Snow Globe in the tree<br>
 
 ## v1.1.0 Snow Globe Behavior
 [Top](#snowglobe-tft\-gizmo "Top")<br>
-As of v1.1.0 for TFT Gizmo version:
+As of V1.54 (TFT Gizmo 1.54 inch display):
 - At startup, a psuedo-random number is used to choose the background image and load it up
 - Snowfall starts
 - If either a SHAKE is detected or 300 seconds pass - REBOOT
 
-As of v1.1.0 for Go Big version:
+As of V2.1 (adds 2.1 inch round display; controller TL021WVC02CT-B1323)
 - At startup, the first stored background image is loaded
 - Snowfall starts
 - While TRUE:
-  - If 200 seconds pass - load next image and restart snowfall
+  - If 5 seconds pass - load next image and restart snowfall
 
-NOTE: popular request is to make time 5 seconds between backgrounds
+As of V2.8 (adds 2.8 inch round display; controller TL028WVC01-B1621A)
+- At startup, the first stored background image is loaded
+- Snowfall starts
+- While TRUE:
+  - If 5 seconds pass - load next image and restart snowfall
+
+NOTE: popular request is to make time 5 seconds between backgrounds. You may find variation between the times at various versions.
+
 ## Preparation of the TFT Gizmo Electronics
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 - First - go here [Update to Latest Firmware and CircuitPython](#update-to-latest-firmware-and-circuitpython "Update to Latest Firmware and CircuitPython")<br>
