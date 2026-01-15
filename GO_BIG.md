@@ -58,28 +58,36 @@ The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
-### Software Changes
+## Software Changes
 [Top](#go-big "Top")<br>
+I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
 
-#### File Format
+### Image File Format
 [Top](#go-big "Top")<br>
 When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
 
 I modified **mdo_tablegen.py** to also create a **.bin** file that is a big-endian version of the data in raw binary. It now takes about 15 seconds to boot **mdo_qualia_paint.py** reading this **.bin** file.
 
-This **mdo_tablegen.py** will work for the Snow Globe project too.
+This **mdo_tablegen.py** will work for the Snow Globe project too. Maybe some minor changes...
 
-#### Overall Organization
+### Overall Organization
 [Top](#go-big "Top")<br>
+The program starts running the **main()** routine.<br>
+```python
+if __name__ == "__main__":
+    main()
+```
 
-
-## mdo_x.x_round_ornament.py
-[Top](#go-big "Top")<br>
-I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
+**main()** gets the display hardware initialized and holds several key structures
+- **img_565** - a preallocated buffer for RGB 565 pixels, arranged per .bin file which is width-first
+  - this will hold the unmodified background image
+- **bitmap** - this is the image as displayed. If pixels are filled in here and auto_refresh set to True, it will show on the screen.
+- **list_of_bin** - list of .bin files in **pix** directory, sorted alphabetically 
+- **G_FLAKE_REGIONS** - list of [x_bgn, x_end, y_bgn, y_end] regions for snowflakes. Size and position are somewhat random.
 
 ### Performance
 [Top](#go-big "Top")<br>
-It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive.
+It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive. When looping with a 5 second delay for snow movement it takes 12 seconds, so it seems to take about 7 seconds to actually read and display once the program is initialized.
 
 Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
 
@@ -89,11 +97,11 @@ On the other hand, the snow movement is definitely jerky compared to the TFT-Giz
 
 ### Memory
 [Top](#go-big "Top")<br>
-I am creating the list ([]) img_565 early on and keeping it in scope so we don't fragment RAM by allocating/deallocating it over and over.
+I create the list ([]) img_565 early on and keep it in scope so we don't fragment RAM by allocating/deallocating it over and over.
 - This retains the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
-- This seems to be working - see below.
+- This seems to be working - no RAM crashes - see below.
 
-### 01 - Test of Memory Usage Robustness
+#### 01 - Test of Memory Usage Robustness
 [Top](#go-big "Top")<br>
 My hope is that by starting with this code which is closer to the metal, I can avoid the memory problems I had with the TFT-Gizmo version.
 - The problem with debugging the TFT-Gizmo version is my lack of background knowledge in the display routines used. I was just using a shotgun approach to debug it. Admittedly I did find some issues and got it to last through 5 background changes instead of 2, but eventually I just used the reboot option.
