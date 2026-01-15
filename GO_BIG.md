@@ -87,6 +87,7 @@ if __name__ == "__main__":
 ### Performance
 [Top](#go-big "Top")<br>
 It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive. When looping with a 5 second delay for snow movement it takes 12 seconds, so it seems to take about 7 seconds to actually read and display once the program is initialized.
+- This shows as the snow holding still followed by a sweep across the screen replacing the background image.
 
 Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
 
