@@ -33,14 +33,19 @@ The display for the 2.1" is found at https://www.adafruit.com/product/5792.
 The display for the 2.8" is found at https://www.adafruit.com/product/5852.
 
 It seems probable that I won't have to modify the program at all to switch between these two displays.
+- Ha ha! That was incorrect. The two displays use a different controller chip with different initialization etc.
+- When all is said and done, just one line needed changing. Adafruit added the 2.8 to their list of supported displays.
+- See [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
-### Starting Point - qualia_paint.py and tablegen.py
+## Software Starting Point - qualia_paint.py and tablegen.py
 [Top](#go-big "Top")<br>
 I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 
 I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
+- **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these TFT displays.
+- **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
 
 The original Adafruit **qualia_paint.py** can be found here:
 - https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
@@ -50,21 +55,30 @@ The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
+### Software Changes
+[Top](#go-big "Top")<br>
+
+#### File Format
+[Top](#go-big "Top")<br>
 When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
 
 I modified **mdo_tablegen.py** to also create a **.bin** file that is a big-endian version of the data in raw binary. It now takes about 15 seconds to boot **mdo_qualia_paint.py** reading this **.bin** file.
 
 This **mdo_tablegen.py** will work for the Snow Globe project too.
 
-## mdo_big_round_ornament.py
+#### Overall Organization
 [Top](#go-big "Top")<br>
-I decided to call this program **mdo_big_round_ornament.py**
+
+
+## mdo_x.x_round_ornament.py
+[Top](#go-big "Top")<br>
+I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
 
 ### Performance
 [Top](#go-big "Top")<br>
 It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive.
 
-Maybe I will make **mdo_big_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
+Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
 
 From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
 
@@ -83,7 +97,7 @@ My hope is that by starting with this code which is closer to the metal, I can a
 
 With **mdo_qualia_paint** I had never noticed this issue. However, the background switches were manually invoked and I had never tested the limits to see if there was a latent problem.
 
-The file **01_RobustnessTest.py** (an early version of mdo_big_round_ornament.py) changes the background every 10 seconds. I ran it for 20 hours and it was still going without a problem.
+The file **01_RobustnessTest.py** (an early version of mdo_x.x_round_ornament.py) changes the background every 10 seconds. I ran it for 20 hours and it was still going without a problem.
 
 Now that it is hanging on the tree with snow falling I have not yet seen any indication of a memory problem or other crashing issue.
 
