@@ -91,9 +91,9 @@ Now that it is hanging on the tree with snow falling I have not yet seen any ind
 [Top](#go-big "Top")<br>
 | GO BIG Hardware | Description | URL |
 | --- | --- | --- |
+| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.1 inch 480x480 Cap Display | TFT round display 2.1" | https://www.adafruit.com/product/5792 |
 | Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
-| Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
@@ -102,10 +102,12 @@ Note: even though the **GO BIG** display itself is 2.1 inch there is some device
 
 | GO BIGGER Hardware | Description | URL |
 | --- | --- | --- |
-| 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
-| Clear Fillable Ornaments Balls 80mm/3.15"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br>Clear Fillable Christmas Balls 100mm/3.94" |  Clear Plastic DIY Ornament 3.15 inch<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br>Clear Plastic DIY Ornament 4 inch | https://www.amazon.com/dp/B0CF2GXVSN<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR<br> https://www.amazon.com/dp/B0B2LYCLW6 |
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
-| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | [https://www.amazon.com/dp/B0DFPPSPTW&th=1](https://www.amazon.com/dp/B0DFPPSPTW) |
+| 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
+| Clear Fillable Ornaments Balls 90mm | 90,80,70mm plastic DIY ornament 24Pack | https://www.amazon.com/dp/B0FQJL6NLH |
+| Option-A: Itramax Micro USB Extension Cable 20FT 2Pack (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW |
+| Option-B: Itramax USB Extension Cable White Flat 10FT 2Pack | USB-A extender cable | https://www.amazon.com/Itramax-Extension-USB-Compatible-Weatherproof/dp/B0DCNJCSS3/?th=1 |
+| Option-B: Smays Short 1ft USB C Cable USB A to Type C 20-Pack white | Short USB-A to USB-C cable | https://www.amazon.com/dp/B0DMSPR6XF |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
 ## First Steps - Factory Reset and Install Circuit Python
