@@ -149,12 +149,15 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 | Step | Description | URL |
 | --- | --- | --- |
 | 1 | Factory Reset* | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
-| 2 | FW Update | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/install-uf2-bootloader |
-| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/ |
-| 4 | Install Library Bundle | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries |
+| 2 | Tiny UF2 reload | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
+| 3 | FW Update | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/install-uf2-bootloader |
+| 4 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/ |
+| 5 | Install Library Bundle | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries |
 
 Note *
 - Be aware that the "learn" for factory reset says "The Qualia ESP32-S3 microcontroller ships running a circular rainbow gradient example for the round 480x480 display". They are talking about a display such as the 2.1 inch round using the TL021WVC02CT-B1323 controller, not the 2.8 inch round using the TL028WVC01-B1621A controller.
+- May need to use the Adafruit WebSerial ESPTool to do Factory Reset and Tiny UF2 reload.
+  - https://adafruit.github.io/Adafruit_WebSerial_ESPTool/
 
 After copying entire Adafruit bundle into /lib, there is room for 20 image 480x480 *.bin files in the pix directory.
 - Note that if there are 20 *.bin files there and you try to over-write, it will say not enough room. In that case you must delete the file you are going to over-write first, then copy.
