@@ -84,20 +84,27 @@ if __name__ == "__main__":
 - **list_of_bin** - list of .bin files in **pix** directory, sorted alphabetically 
 - **G_FLAKE_REGIONS** - list of [x_bgn, x_end, y_bgn, y_end] regions for snowflakes. Size and position are somewhat random.
 
+The primary actions of **main()** are
+- load_bitmap() - loads the first background image
+- start_snow() - puts "random-sized" snowflakes on "random-locations" in entire range of background image
+- while True:
+  - if time for this background image has expired, pick next image and do load_bitmap() and start_snow()
+  - else do move_snow(), which will refresh snowflakes in top region that hit the bottom. Snowflakes move proportional to linear size (eat your heart out Isaac Newton!).
+
 ### Performance
 [Top](#go-big "Top")<br>
-It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive. When looping with a 5 second delay for snow movement it takes 12 seconds, so it seems to take about 7 seconds to actually read and display once the program is initialized.
-- This shows as the snow holding still followed by a sweep across the screen replacing the background image.
+It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive. When looping with a 5 second delay for snow movement it takes 12 seconds, so it seems to take about 7 seconds to actually read .bin, display it, and start snow once the program is initialized.
+- This process shows as the snow holding still while reading .bin followed by a sweep across the screen replacing the background image, then appearance of snowflakes.
 
-Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. But first let's get it working, then we can optimize.
-
-From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
+Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
 
 On the other hand, the snow movement is definitely jerky compared to the TFT-Gizmo version.
 
 ### Memory
 [Top](#go-big "Top")<br>
-I create the list ([]) img_565 early on and keep it in scope so we don't fragment RAM by allocating/deallocating it over and over.
+One of the issues with the TFT-Gizmo version that I have not resolved is that if it tries to load background images one after another it will eventually crash from not being to allocate the memory. This was something I wanted to absolutely not allow in this version.
+
+I create the python list - [] - img_565 early on and keep it in scope so we don't fragment RAM by allocating/deallocating it over and over.
 - This retains the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
 - This seems to be working - no RAM crashes - see below.
 
