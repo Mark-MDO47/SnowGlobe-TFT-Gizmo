@@ -24,7 +24,7 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
 
 Here are some images after implementing the above.
 
-To show display sizes, below is (left to right) the Qualia 2.8 inch, Qlaia 2.1 inch, and TFT-GizMo displays.<br>
+To show display sizes, below is (left to right) the Qualia 2.8 inch, Qualia 2.1 inch, and TFT-GizMo displays.<br>
 <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays.jpg" width="800" alt="2.8 inch, 2.1 inch, TFT GizMo">
 
 
