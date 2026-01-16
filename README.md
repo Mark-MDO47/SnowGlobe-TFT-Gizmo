@@ -24,6 +24,10 @@ To see issues I had with my plan see https://github.com/Mark-MDO47/CircuitPlaygr
 
 Here are some images after implementing the above.
 
+To show display sizes, below is (left to right) the Qualia 2.8 inch, Qlaia 2.1 inch, and TFT-GizMo displays.<br>
+<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays.jpg" width="800" alt="2.8 inch, 2.1 inch, TFT GizMo">
+
+
 | neither confirm nor deny | pancakes in the morning | wedding | Go Big |
 | --- | --- | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="266" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Pancakes.jpg" width="266" alt="Making pancakes in the morning"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_Wedding.jpg" width="266" alt="At the wedding altar"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="356" alt="Go Big Snowglobe on table - smudged to protect the guilty"> |
