@@ -102,17 +102,17 @@ See here for the story:
 ## Software - TFT Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 See the following to examine the code.py and boot.py I am using.
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/README.md
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code_TFT_Gizmo_1.54
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code_TFT_Gizmo_1.54/README.md
 
 The code.py software I am using is based on the **Circuit Playground TFT Gizmo Snow Globe** by Carter Nelson. This is a CircuitPython program.
 - https://learn.adafruit.com/circuit-playground-tft-gizmo-snow-globe/
 
 Because the latest stable version of CircuitPython was 10.0.3 when I did this project, I started from the "simple" version of Carter's Snow Globe for CircuitPython 10.x. The original version is here in addition to the Adafruit Learning address above.
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/code.original.simple.10x.py
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code_TFT_Gizmo_1.54/code.original.simple.10x.py
 
 My version of the code is here:
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code/code.py
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/code_TFT_Gizmo_1.54/code.py
 
 I did a little code re-arranging to suit my style. I was hoping to be able to have it load a sequence of background images but found it would hit memory limitations after anywhere from 2 to 5 images in my various attempts to solve it. I am not sure if the issue is a memory leak or memory fragmentation. As Christmas was approaching, I opted to do a reboot to load the next background image to avoid memory issues.
 
