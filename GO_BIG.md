@@ -121,11 +121,11 @@ With **mdo_qualia_paint** I had never noticed this issue. However, the backgroun
 
 The file **01_RobustnessTest.py** (an early version of mdo_x.x_round_ornament.py) changes the background every 10 seconds. I ran it for 20 hours and it was still going without a problem.
 
-Now that it is hanging on the tree with snow falling I have not yet seen any indication of a memory problem or other crashing issue.
+Now that the 2.1 inch version it is hanging on the tree with snow falling I have not yet seen any indication of a memory problem or other crashing issue. The 2.8 inch version was started after Christmas so no Christmas tree to hang it in yet. Gives me something to look forward to!
 
-## Parts List
+## Parts List Go Big 2.1
 [Top](#go-big "Top")<br>
-| GO BIG Hardware | Description | URL |
+| GO BIG 2.1 Hardware | Description | URL |
 | --- | --- | --- |
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.1 inch 480x480 Cap Display | TFT round display 2.1" | https://www.adafruit.com/product/5792 |
@@ -136,7 +136,9 @@ Now that it is hanging on the tree with snow falling I have not yet seen any ind
 Note: even though the **GO BIG** display itself is 2.1 inch there is some device space surrounding the display edge so this ornament ball fits nicely on top of the display. To use the back part of the ornament ball I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
 - For now I just folded the display and ESP32-S3 over into one-half of the globe with bubble-wrap to maintain electrical isolation, then used foam and tape to hold it in. I thought I had destroyed it but it still worked. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
 
-| GO BIGGER Hardware | Description | URL |
+## Parts List Go Bigger 2.8
+[Top](#go-big "Top")<br>
+| GO BIGGER 2.8 Hardware | Description | URL |
 | --- | --- | --- |
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
@@ -168,6 +170,7 @@ Note [3]
 - After copying entire Adafruit bundle into /lib, there is room for 20 image 480x480 *.bin files in the pix directory.
 - If there are 20 *.bin files there and you try to over-write, it will say not enough room. In that case you must delete the file you are going to over-write first, then copy.
 
+### Things to Know
 | To Know | Where |
 | --- | --- |
 | UF2 Bootloader details | https://learn.adafruit.com/adafruit-hallowing/uf2-bootloader-details |
