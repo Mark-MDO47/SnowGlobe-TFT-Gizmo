@@ -2,7 +2,7 @@
 
 I decided to make a bigger version of the Snow Globe. 
 - **GO BIG** uses the round 2.1" 480x480 TFT display. I used the touchscreen version since that was what I had in the bin.
-- **GO BIGGER** will use the round 2.8" 480x480 TFT display. This one is not a touchscreen version since in this application we cannot touch the screen. Also it uses a different controller than the 2.1" so requires a slightly different program.
+- **GO BIGGER** will use the round 2.8" 480x480 TFT display. This one is not a touchscreen version since in this application we cannot touch the screen. Also it uses a different display controller than the 2.1" so requires a slightly different program.
 
 | 2.1 display on the table | 2.1 display on the tree |
 | --- | --- |
