@@ -8,7 +8,7 @@ I decided to make a bigger version of the Snow Globe.
 | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
 
- | All 3 displays fireplace scene | All 3 displays Popular Electronics  |
+ | Screen Comparison #1 | Screen Comparison #2  |
 | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays2.jpg" width="400" alt="All three displays fireplace scene"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays3.jpg" width="400" alt="All 3 displays Popular Electronics"> |
 
