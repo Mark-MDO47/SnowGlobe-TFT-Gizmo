@@ -6,7 +6,7 @@ I decided to make a bigger version of the Snow Globe.
 
 | 2.1 display on the table | 2.8 display on table | 2.1 display on the tree |
 | --- | --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBigger_OnTable.jpg" width="300" alt="Go Bigger 2.8 Snowglobe display on table"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBigger_OnTable.jpg" width="300" alt="Go Bigger 2.8 Snowglobe display on table"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="300" alt="Go Big Snowglobe - smudged to protect the guilty"> |
 
  | Screen Comparison #1 | Screen Comparison #2  |
 | --- | --- |
