@@ -4,11 +4,11 @@ I decided to make a bigger version of the Snow Globe.
 - **GO BIG** uses the round 2.1" 480x480 TFT display. I used the touchscreen version since that was what I had in the bin.
 - **GO BIGGER** will use the round 2.8" 480x480 TFT display. This one is not a touchscreen version since in this application we cannot touch the screen. Also it uses a different display controller than the 2.1" so requires a slightly different program.
 
-| 2.1 display on the table | 2.1 display on the tree |
-| --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
+| 2.1 display on the table | 2.8 display on table | 2.1 display on the tree |
+| --- | --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="300" alt="Go Big Snowglobe on table - smudged to protect the guilty"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBigger_OnTable.jpg" width="300" alt="Go Bigger 2.8 Snowglobe display on table"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_BarefootFormal_1020x768_smudge.png" width="400" alt="Go Big Snowglobe - smudged to protect the guilty"> |
 
- | All 3 displays fireplace scene | All 3 displays Popular Electronics  |
+ | Screen Comparison #1 | Screen Comparison #2  |
 | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays2.jpg" width="400" alt="All three displays fireplace scene"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays3.jpg" width="400" alt="All 3 displays Popular Electronics"> |
 
