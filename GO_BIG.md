@@ -39,7 +39,7 @@ The display for the 2.1" is found at https://www.adafruit.com/product/5792.
 The display for the 2.8" is found at https://www.adafruit.com/product/5852.
 
 It seems probable that I won't have to modify the program at all to switch between these two displays.
-- Ha ha! That was incorrect. The two displays use a different controller chip with different initialization etc.
+- Ha ha and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
 - When all is said and done, just one line needed changing. Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
@@ -93,7 +93,7 @@ The primary actions of **main()** are
 - start_snow() - puts "random-sized" snowflakes on "random-locations" in entire range of background image
 - while True:
   - if time for this background image has expired, pick next image and do load_bitmap() and start_snow()
-  - else do move_snow(), which will refresh snowflakes in top region that hit the bottom. Snowflakes move proportional to linear size (eat your heart out Isaac Newton!).
+  - else do move_snow() - if snowflake hits the bottom, it will refresh the snowflake into the top region of the display. Snowflakes move proportional to linear size (eat your heart out Isaac Newton!).
 
 ### Performance
 [Top](#go-big "Top")<br>
@@ -106,11 +106,11 @@ On the other hand, the snow movement is definitely jerky compared to the TFT-Giz
 
 ### Memory
 [Top](#go-big "Top")<br>
-One of the issues with the TFT-Gizmo version that I have not resolved is that if it tries to load background images one after another it will eventually crash from not being to allocate the memory. This was something I wanted to absolutely not allow in this version.
+One of the issues with the TFT-Gizmo version that I have not resolved is that if it tries to load background images one after another it will eventually crash from not being able to allocate the memory. This was something I wanted to absolutely not have happen in this Qualia round display version.
 
-I create the python list - [] - img_565 early on and keep it in scope so we don't fragment RAM by allocating/deallocating it over and over.
+I create the python list (type []) for img_565 early on and keep it in scope so we don't fragment RAM by allocating/deallocating it over and over.
 - This retains the 16-bit pixel information of the current background image. That will be a handy thing to have around as we move the snow sprites around.
-- This seems to be working - no RAM crashes - see below.
+- This seems to be working - no RAM crashes - see robustness test below.
 
 #### 01 - Test of Memory Usage Robustness
 [Top](#go-big "Top")<br>
@@ -130,8 +130,8 @@ Now that it is hanging on the tree with snow falling I have not yet seen any ind
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.1 inch 480x480 Cap Display | TFT round display 2.1" | https://www.adafruit.com/product/5792 |
 | Clear Fillable Ornaments Balls 80mm/3.15" | Clear Plastic DIY Ornament 3.15 inch | https://www.amazon.com/dp/B0CF2GXVSN |
-| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 | USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
+| Itramax Micro USB Extension Cable 20FT (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW&th=1 |
 
 Note: even though the **GO BIG** display itself is 2.1 inch there is some device space surrounding the display edge so this ornament ball fits nicely on top of the display. To use the back part of the ornament ball I will have to make a cut and leave the rest of the electronics on the outside. I have ordered some 4 inch ornament balls but they won't be here before Christmas.
 - For now I just folded the display and ESP32-S3 over into one-half of the globe with bubble-wrap to maintain electrical isolation, then used foam and tape to hold it in. I thought I had destroyed it but it still worked. Had to pay attention so that the USB connection could be made but it looks surprisingly good!
@@ -141,10 +141,10 @@ Note: even though the **GO BIG** display itself is 2.1 inch there is some device
 | Qualia ESP32-S3 RBG-666 40p TFT | Special TFT ESP32-S3 board | https://www.adafruit.com/product/5800 |
 | 2.8 inch 480x480 Cap Display | TFT round display 2.8" | https://www.adafruit.com/product/5852 |
 | Clear Fillable Ornaments Balls 90mm | 90,80,70mm plastic DIY ornament 24Pack | https://www.amazon.com/dp/B0FQJL6NLH |
+| USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 | Option-A: Itramax Micro USB Extension Cable 20FT 2Pack (note: flat cable USB-A to USB-C) | USB cable | https://www.amazon.com/dp/B0DFPPSPTW |
 | Option-B: Itramax USB Extension Cable White Flat 10FT 2Pack | USB-A extender cable | https://www.amazon.com/Itramax-Extension-USB-Compatible-Weatherproof/dp/B0DCNJCSS3/?th=1 |
 | Option-B: Smays Short 1ft USB C Cable USB A to Type C 20-Pack white | Short USB-A to USB-C cable | https://www.amazon.com/dp/B0DMSPR6XF |
-| USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube (note: also has USB-A output) | USB charger | https://www.amazon.com/dp/B0CPSBD68W?th=1 |
 
 ## First Steps - Factory Reset and Install Circuit Python
 [Top](#go-big "Top")<br>
