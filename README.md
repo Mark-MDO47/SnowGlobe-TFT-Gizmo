@@ -27,7 +27,7 @@ Here are some images after implementing the above.
 To show display sizes, below is (left to right) the Qualia 2.8 inch, Qualia 2.1 inch, and TFT-GizMo displays.<br>
 <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays.jpg" width="800" alt="2.8 inch, 2.1 inch, TFT GizMo">
 
-
+Here is the Snow Globe on the table<br>
 | TFT GizMo 1.54 neither confirm nor deny | Qualia 2.1 on the table |
 | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobe_CannotDeny.jpg" width="266" alt="I can neither confirm nor deny"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/GoBig_OnTable_smudged.jpg" width="356" alt="Go Big Snowglobe on table - smudged to protect the guilty"> |
