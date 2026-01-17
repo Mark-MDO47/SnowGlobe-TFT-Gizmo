@@ -219,7 +219,7 @@ This requires specific setup; see example here (I later found easier ways to do 
 There is an example pointed to below that shows that ROUND28 is now an available option to Qualia (search for **ROUND28** or **Wed Nov 06, 2024 10:06 am** by adafruit_support_carter
 - https://forums.adafruit.com/viewtopic.php?p=1034614&hilit=tl028wvc01+2.8+480x480#p1034614
 
-This means I can use the 2.8 inch display by changing one line. All the magic initialization and usage of a new controller chip are taken care of automagically.
+This means I can use the 2.8 inch display by changing one line. All the initialization and usage of a new controller chip are taken care of automagically.
 
 ```python
 <<<2.1 inch display>>>
