@@ -150,6 +150,12 @@ Note: even though the **GO BIG** display itself is 2.1 inch there is some device
 | Option-B: Itramax USB Extension Cable White Flat 10FT 2Pack | USB-A extender cable | https://www.amazon.com/Itramax-Extension-USB-Compatible-Weatherproof/dp/B0DCNJCSS3/?th=1 |
 | Option-B: Smays Short 1ft USB C Cable USB A to Type C 20-Pack white | Short USB-A to USB-C cable | https://www.amazon.com/dp/B0DMSPR6XF |
 
+Note: having the SnowGlobe hardware directly attached to the USB cable causes the hardware to shift around when the cable is inserted and removed. Using a USB extension cable with an always-attached short USB cable on the SnowGlobe is my latest attempt to solve this. I plan to try some moldable plastic on the hole in the SnowGlobe to fix the short USB cable in place. Since the hole will be in the back of the SnowGlobe, this should not be visible from the front.
+
+I looked at doing a similar thing with a USB adapter but this looked tricky. One issue is that connecting and disconnecting would still be applying pressure on the SnowGlobe, even if the adapter was embedded in moldable plastic. Also that forces the ESP32-S3 board to be in a particular place in the SnowGlobe.
+
+With a short USB cable, the physical affects of connecting and disconnecting are buffered by the short cable bending.
+
 ## First Steps - Factory Reset and Install Circuit Python
 [Top](#go-big "Top")<br>
 Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
