@@ -32,7 +32,7 @@ I decided to make a bigger version of the Snow Globe.
 ## The Plan
 [Top](#go-big "Top")<br>
 
-### Hardware for **GO BIG** and **GO BIGGER**
+### Hardware for GO BIG and GO BIGGER
 [Top](#go-big "Top")<br>
 The display for the 2.1" is found at https://www.adafruit.com/product/5792.
 
