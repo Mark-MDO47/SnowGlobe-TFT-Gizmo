@@ -94,15 +94,6 @@ I needed a way to get the USB cable into the plastic globe. Ideally I would put 
 
 Eventually I used the slow-speed electric drill and a 7/32 inch pilot hole, followed by a grinding attachment from my Dremel tool again with the slow-speed electric drill to get about a 3/8 inch hole. I finished up with a smaller grinding tool on the actual Dremel tool to slot out the sides. Not pretty, but it fits the cable and it is on the backside of the ornament.
 
-## Go Big 2.1 inch or Go Bigger 2.8 inch Round Display
-[Top](#snowglobe-tft\-gizmo "Top")<br>
-I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this. Also Adafruit has a 2.8" 480x480 display that I am going to try.
-
-The round 2.1" display version was a big hit! It also doesn't have the memory problems that my TFT Gizmo version has.
-
-See here for the story:
-- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
-
 ## Software - TFT Gizmo
 [Top](#snowglobe-tft\-gizmo "Top")<br>
 See the following to examine the code.py and boot.py I am using.
@@ -205,3 +196,13 @@ It is for all Circuit Playground and includes a section on the Bluefruit model.
 ### Non-Official but Useful
 Quick Reference Guide - Adafruit Circuit Playground Bluefruit (from Carnegie Mellon University)
 - https://courses.ideate.cmu.edu/16-376/s2022/ref/text/code/cpb-quickref.html
+
+## Go Big 2.1 inch or Go Bigger 2.8 inch Round Display
+[Top](#snowglobe-tft\-gizmo "Top")<br>
+I had previously done some experiments with a round 2.1" display and an ESP32-S3 based board. I didn't have any memory problems with displaying successive images. I decided to make a Snow Globe from this. Also Adafruit has a 2.8" 480x480 display that I am going to try.
+
+The round 2.1" display version was a big hit! It also doesn't have the memory problems that my TFT Gizmo version has.
+
+See here for the story:
+- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md
+
