@@ -177,6 +177,7 @@ Note [2]
 Note [3]
 - After copying entire Adafruit bundle into /lib, there is room for 20 image 480x480 *.bin files in the pix directory.
 - If there are 20 *.bin files there and you try to over-write, it will say not enough room. In that case you must delete the file you are going to over-write first, then copy.
+  - If you want to trim the **lib** directory you can search it for libraries that you could delete but still have the code run. I didn't bother.
 
 ### Things to Know
 | To Know | Where |
