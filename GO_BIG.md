@@ -164,7 +164,7 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 | --- | --- | --- |
 | 1 | Factory Reset [1] [2] | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset<br>https://github.com/adafruit/Adafruit-Qualia-S3-RGB666-PCB/tree/main/factory-reset<br><br>Most general way is WebSerial using the *.bin |
 | 2 | FW Update [2]<br> A.K.A Tiny UF2 reload | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset<br>&nbsp;&nbsp;&nbsp;&nbsp;Search for OPEN INSTALLER Method for UF2 Bootloader Installation<br><br> Again WebSerial is your friend using the *.bin |
-| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/<br><br>You should be able to copy the *.uf2 onto the "CIRCUITPY" disk |
+| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/<br><br>You should be able to copy the *.uf2 onto the "TFT_S3BOOT" disk |
 | 4 | Install Library Bundle [3] | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries<br><br>Copy the contents of the lib directory to the lib directory on the "CIRCUITPY" disk |
 
 Note [1]
