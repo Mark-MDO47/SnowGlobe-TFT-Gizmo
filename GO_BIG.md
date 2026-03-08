@@ -162,10 +162,10 @@ Here is how to configure the Qualia ESP32-S3 for Circuit Python<br>
 
 | Step | Description | URL |
 | --- | --- | --- |
-| 1 | Factory Reset [1] [2] | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset |
-| 2 | FW Update [2]<br> A.K.A Tiny UF2 reload | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/install-uf2-bootloader |
-| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/ |
-| 4 | Install Library Bundle [3] | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries |
+| 1 | Factory Reset [1] [2] | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset<br>https://github.com/adafruit/Adafruit-Qualia-S3-RGB666-PCB/tree/main/factory-reset<br><br>Most general way is WebSerial using the *.bin |
+| 2 | FW Update [2]<br> A.K.A Tiny UF2 reload | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/factory-reset<br>&nbsp;&nbsp;&nbsp;&nbsp;Search for OPEN INSTALLER Method for UF2 Bootloader Installation<br><br> Again WebSerial is your friend using the *.bin |
+| 3 | Install CircuitPython | https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-display-setup<br>https://circuitpython.org/board/adafruit_qualia_s3_rgb666/<br><br>You should be able to copy the *.uf2 onto the "TFT_S3BOOT" disk |
+| 4 | Install Library Bundle [3] | https://docs.circuitpython.org/projects/qualia/en/latest/<br>https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays/circuitpython-libraries<br>https://circuitpython.org/libraries<br><br>Copy the contents of the lib directory to the lib directory on the "CIRCUITPY" disk |
 
 Note [1]
 - Be aware that the "learn" for factory reset says "The Qualia ESP32-S3 microcontroller ships running a circular rainbow gradient example for the round 480x480 display". They are talking about a display such as the 2.1 inch round using the TL021WVC02CT-B1323 controller, not the 2.8 inch round using the TL028WVC01-B1621A controller.
@@ -177,6 +177,7 @@ Note [2]
 Note [3]
 - After copying entire Adafruit bundle into /lib, there is room for 20 image 480x480 *.bin files in the pix directory.
 - If there are 20 *.bin files there and you try to over-write, it will say not enough room. In that case you must delete the file you are going to over-write first, then copy.
+  - If you want to trim the **lib** directory you can search it for libraries that you could delete but still have the code run. I didn't bother.
 
 ### Things to Know
 | To Know | Where |
