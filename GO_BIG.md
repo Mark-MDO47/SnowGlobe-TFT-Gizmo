@@ -87,7 +87,7 @@ In order to run CircleCapture, there are some non-standard libraries to install.
 ```
 
 Here is an image of **CircleCapture.py** in action<br>
-<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/CircleSelector.jpg" width="400" alt="Circle Selector window">
+<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/circle_capture_robots.jpg" width="400" alt="Circle Selector window">
 
 ## Software Starting Point - qualia_paint.py and tablegen.py
 [Top](#go-big "Top")<br>
