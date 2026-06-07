@@ -79,6 +79,7 @@ I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
 ### Install Requirements
 [Top](#go-big "Top")<br>
 In order to run CircleCapture, there are some non-standard libraries to install. In the command below, replace **<your installer>** with your installer. It is likely to be either **pip** (standard Python package manager) or **conda** (Anaconda/Conda).
+- In my environment I need to use **conda install --channel conda-forge** to find pillow-heif
 
 ```
 <your installer> install pillow pillow-heif
