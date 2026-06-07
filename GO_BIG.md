@@ -21,6 +21,7 @@ I decided to make a bigger version of the Snow Globe.
 * [The Plan](#the-plan "The Plan")
   * [Hardware for GO BIG and GO BIGGER](#hardware-for-go-big-and-go-bigger "Hardware for GO BIG and GO BIGGER")
 * [CircleCapture.py](#circlecapturepy "CircleCapture.py")
+  * [Install Requirements](#install-requirements "Install Requirements")
 * [Software Starting Point - qualia_paint.py and tablegen.py](#software-starting-point-\--qualia_paintpy-and-tablegenpy "Software Starting Point - qualia_paint.py and tablegen.py")
 * [Software Changes](#software-changes "Software Changes")
   * [Image File Format](#image-file-format "Image File Format")
