@@ -124,7 +124,7 @@ This **mdo_tablegen.py** will work for the Snow Globe project too. Maybe some mi
 
 ### Overall Organization
 [Top](#go-big "Top")<br>
-The **mdo_2.1_round_ornament.py** or **mdo_2.8_round_ornament.py** program starts running the **main()** routine.<br>
+The **mdo_2.1_round_ornament.py** or **mdo_2.8_round_ornament.py** program (derived originally from **qualia_paint.py**) starts running the **main()** routine.<br>
 ```python
 if __name__ == "__main__":
     main()
