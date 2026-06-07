@@ -93,6 +93,9 @@ I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
 | Shift+-          | Radius -10 px           |
 | Ctrl+S           | Save PNG + metadata TXT |
 
+Here is an image of **CircleCapture.py** in action<br>
+<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/CircleSelector.jpg" width="400" alt="Circle Selector window">
+
 ## Software Changes
 [Top](#go-big "Top")<br>
 I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
