@@ -23,7 +23,56 @@ CircleCapture.py - capture a square portion of an image, displaying the
 # | Shift++          | Radius +10 px           |
 # | -                | Radius -1 px            |
 # | Shift+-          | Radius -10 px           |
+# | M or m           | Center circle of max size |
 # | Ctrl+S           | Save PNG + metadata TXT |
+
+# LIBRARIES USED
+# --------------
+# tkinter
+    # Standard Python GUI library.
+    # Used for:
+        # • window creation
+        # • keyboard handling
+        # • mouse handling
+        # • drawing graphics overlays
+
+# Pillow (PIL)
+    # Python Imaging Library fork.
+    # Used for:
+        # • loading image files
+        # • resizing images
+        # • cropping images
+        # • converting images for Tkinter display
+
+# pillow-heif
+    # Adds HEIC/HEIF support to Pillow.
+    # Used so Apple iPhone images can be loaded directly.
+
+# os
+    # Used for file name manipulation.
+
+# sys
+    # Used for command-line argument handling.
+
+# COORDINATE SYSTEM
+# -----------------
+# All coordinates are maintained in the ORIGINAL image coordinate space.
+# A scaled preview image is displayed to fit the user's screen.
+# Example:
+    # Original image:
+        # 8000 x 6000
+    # Display preview:
+        # 1600 x 1200
+# The circle position and radius are stored in original-image pixels.
+# This allows:
+    # • accurate coordinates
+    # • full-resolution crops
+    # • responsive display
+
+# The preview simply converts original coordinates using:
+    # display_coordinate = original_coordinate * scale
+# and mouse positions are converted back using:
+    # original_coordinate = display_coordinate / scale
 
 import os
 import sys
@@ -34,8 +83,128 @@ from pillow_heif import register_heif_opener
 
 register_heif_opener()
 
+# 
+# ============================================================================ 
+# USER CONFIGURATION 
+# ============================================================================ 
+# 
+# All programmer-adjustable settings are collected here. 
+# 
+# Much future customization should require changing only these values. 
+#
+# ============================================================================
+#
+# Output PNG dimensions.
+#
+# The selected square is resampled to this size before saving.
+#
 OUTPUT_SIZE = 480
 
+#
+# Initial circle size.
+#
+# Radius is initialized to:
+#
+#     min(image_width, image_height) / INITIAL_RADIUS_DIVISOR
+#
+MAX_RADIUS_DIVISOR = 2     # gives maximum size circle to fit in current image
+INITIAL_RADIUS_DIVISOR = MAX_RADIUS_DIVISOR # usually we want a maximum size circle
+
+#
+# Limits, move sizes, step sizes, and display feature sizes are given in pixels within the current image size
+
+#
+# Radius limits
+#
+MIN_RADIUS = 5
+
+#
+# Mouse wheel radius adjustment.
+#
+# Each wheel click changes radius by this amount.
+#
+MOUSE_WHEEL_RADIUS_STEP = 5
+
+#
+# Keyboard radius adjustment.
+#
+# example is +, but - is just the same
+# +       => KEYBOARD_RADIUS_STEP pixels
+# Shift+  => KEYBOARD_RADIUS_SHIFT_STEP pixels
+#
+KEYBOARD_RADIUS_STEP = 1
+KEYBOARD_RADIUS_SHIFT_STEP = 10
+
+#
+# Circle movement increments.
+#
+# Arrow                => MOVE_COARSE
+# Shift+Arrow          => MOVE_MEDIUM
+# Ctrl+Shift+Arrow     => MOVE_FINE
+#
+MOVE_COARSE = 100
+MOVE_MEDIUM = 10
+MOVE_FINE = 1
+
+#
+# Preview sizing.
+#
+# Preview image is scaled so it occupies at most:
+#
+#     SCREEN_WIDTH  * PREVIEW_SCREEN_WIDTH_FRACTION
+#     SCREEN_HEIGHT * PREVIEW_SCREEN_HEIGHT_FRACTION
+#
+PREVIEW_SCREEN_WIDTH_FRACTION = 0.90
+PREVIEW_SCREEN_HEIGHT_FRACTION = 0.80
+
+#
+# Overlay colors.
+#
+CIRCLE_COLOR = "lime"
+SQUARE_COLOR = "red"
+CENTER_COLOR = "cyan"
+
+#
+# Overlay line thicknesses.
+#
+CIRCLE_LINE_WIDTH = 2
+SQUARE_LINE_WIDTH = 2
+CENTER_LINE_WIDTH = 2
+
+#
+# Center marker size.
+#
+CENTER_MARK_SIZE = 10
+
+#
+# Canvas background.
+#
+CANVAS_BACKGROUND = "black"
+
+#
+# Status line font.
+#
+STATUS_FONT = ("Consolas", 10)
+
+#
+# Window title.
+#
+WINDOW_TITLE = "Circle Capture"
+
+#
+# Extra pixels added to window height
+# for status bar and decorations.
+#
+WINDOW_VERTICAL_MARGIN = 60
+
+#
+# Output Image and Metadata filename suffix.
+#
+OUTPUT_IMAGE_SUFFIX = "_circle.png"
+OUTPUT_TEXT_SUFFIX = "_circle.txt"
+
+#
+# ============================================================================
 
 class CircleSelector:
 
@@ -49,8 +218,15 @@ class CircleSelector:
         self.cx = self.width // 2
         self.cy = self.height // 2
 
-        self.radius = min(self.width, self.height) // 2
+        self.radius = min(self.width, self.height) // INITIAL_RADIUS_DIVISOR
 
+    def clamp_max(self):
+
+        self.cx = self.width // 2
+        self.cy = self.height // 2
+
+        self.radius = min(self.width, self.height) // 2
+        
     def clamp_radius(self):
 
         max_radius = min(
@@ -61,7 +237,7 @@ class CircleSelector:
         )
 
         self.radius = max(
-            5,
+            MIN_RADIUS,
             min(int(self.radius), int(max_radius))
         )
 
@@ -106,8 +282,8 @@ class CircleSelector:
             self.image_path
         )[0]
 
-        png_file = base + "_circle.png"
-        txt_file = base + "_circle.txt"
+        png_file = base + OUTPUT_IMAGE_SUFFIX
+        txt_file = base + OUTPUT_TEXT_SUFFIX
 
         crop.save(png_file)
 
@@ -116,6 +292,14 @@ class CircleSelector:
             "w",
             encoding="utf-8"
         ) as f:
+
+            f.write(
+                "%s Metadata\n" % WINDOW_TITLE
+            )
+
+            f.write(
+                "========================\n\n"
+            )
 
             f.write(
                 f"Original File: "
@@ -134,18 +318,26 @@ class CircleSelector:
                 f"Radius: {self.radius}\n\n"
             )
 
-            f.write("Square:\n")
-
             f.write(
-                f"Left: {left}\n"
+                "Bounding Square\n"
             )
 
             f.write(
-                f"Top: {top}\n"
+                "---------------\n"
+            )
+
+            left, top, right, bottom = self.get_square()
+
+            f.write(
+                f"Left:   {left}\n"
             )
 
             f.write(
-                f"Right: {right}\n"
+                f"Top:    {top}\n"
+            )
+
+            f.write(
+                f"Right:  {right}\n"
             )
 
             f.write(
@@ -154,16 +346,19 @@ class CircleSelector:
 
             f.write(
                 f"Square Side: "
-                f"{right-left}\n"
+                f"{2 * self.radius}\n"
             )
 
             f.write(
                 f"Output Size: "
-                f"{OUTPUT_SIZE}\n"
+                f"{OUTPUT_SIZE} x {OUTPUT_SIZE}\n"
             )
 
-        print(f"Saved: {png_file}")
-        print(f"Saved: {txt_file}")
+        print()
+        print("Saved:")
+        print("   ", png_file)
+        print("   ", txt_file)
+        print()
 
 
 class App:
@@ -181,8 +376,15 @@ class App:
         screen_w = root.winfo_screenwidth()
         screen_h = root.winfo_screenheight()
 
-        max_w = int(screen_w * 0.90)
-        max_h = int(screen_h * 0.80)
+        max_w = int(
+            screen_w *
+            PREVIEW_SCREEN_WIDTH_FRACTION
+        )
+
+        max_h = int(
+            screen_h *
+            PREVIEW_SCREEN_HEIGHT_FRACTION
+        )
 
         self.scale = min(
             max_w / img_w,
@@ -223,8 +425,8 @@ class App:
             root,
             width=self.display_w,
             height=self.display_h,
-            highlightthickness=0,
-            bg="black"
+            bg=CANVAS_BACKGROUND,
+            highlightthickness=0
         )
 
         self.canvas.pack()
@@ -239,7 +441,7 @@ class App:
         self.status = tk.Label(
             root,
             anchor="w",
-            font=("Consolas", 10)
+            font=STATUS_FONT
         )
 
         self.status.pack(
@@ -321,9 +523,19 @@ class App:
             self.save
         )
 
+        root.bind(
+            "m",
+            self.max_key
+        )
+
+        root.bind(
+            "M",
+            self.max_key
+        )
+
         root.geometry(
             f"{self.display_w}x"
-            f"{self.display_h+60}"
+            f"{self.display_h + WINDOW_VERTICAL_MARGIN}"
         )
 
         self.redraw()
@@ -347,8 +559,6 @@ class App:
 
         disp_r = s.radius * self.scale
 
-        side = right - left
-
         for item in (
             self.circle_item,
             self.square_item,
@@ -364,8 +574,8 @@ class App:
                 disp_cy - disp_r,
                 disp_cx + disp_r,
                 disp_cy + disp_r,
-                outline="lime",
-                width=2
+                outline=CIRCLE_COLOR,
+                width=CIRCLE_LINE_WIDTH
             )
         )
 
@@ -375,30 +585,30 @@ class App:
                 disp_top,
                 disp_right,
                 disp_bottom,
-                outline="red",
-                width=2
+                outline=SQUARE_COLOR,
+                width=SQUARE_LINE_WIDTH
             )
         )
 
         self.center_h = (
             self.canvas.create_line(
-                disp_cx - 10,
+                disp_cx - CENTER_MARK_SIZE,
                 disp_cy,
-                disp_cx + 10,
+                disp_cx + CENTER_MARK_SIZE,
                 disp_cy,
-                fill="cyan",
-                width=2
+                fill=CENTER_COLOR,
+                width=CENTER_LINE_WIDTH
             )
         )
 
         self.center_v = (
             self.canvas.create_line(
                 disp_cx,
-                disp_cy - 10,
+                disp_cy - CENTER_MARK_SIZE,
                 disp_cx,
-                disp_cy + 10,
-                fill="cyan",
-                width=2
+                disp_cy + CENTER_MARK_SIZE,
+                fill=CENTER_COLOR,
+                width=CENTER_LINE_WIDTH
             )
         )
 
@@ -408,8 +618,8 @@ class App:
             f"Radius={s.radius}   "
             f"TL=({left},{top})   "
             f"BR=({right},{bottom})   "
-            f"Side={side}px   "
-            f"Output=480x480"
+            f"Side={2 * s.radius}px   "
+            f"Output={OUTPUT_SIZE}x{OUTPUT_SIZE}"
         )
 
     def mouse_down(self, event):
@@ -454,19 +664,33 @@ class App:
         if hasattr(event, "delta") and event.delta:
 
             if event.delta > 0:
-                self.selector.radius += 5
+                self.selector.radius += (
+                    MOUSE_WHEEL_RADIUS_STEP
+                )
             else:
-                self.selector.radius -= 5
+                self.selector.radius -= (
+                    MOUSE_WHEEL_RADIUS_STEP
+                )
 
         elif hasattr(event, "num"):
 
             if event.num == 4:
-                self.selector.radius += 5
+                self.selector.radius += (
+                    MOUSE_WHEEL_RADIUS_STEP
+                )
 
             elif event.num == 5:
-                self.selector.radius -= 5
+                self.selector.radius -= (
+                    MOUSE_WHEEL_RADIUS_STEP
+                )
 
         self.selector.clamp_radius()
+
+        self.redraw()
+
+    def max_key(self, event):
+
+        self.selector.clamp_max()
 
         self.redraw()
 
@@ -476,7 +700,11 @@ class App:
             event.state & 0x0001
         ) != 0
 
-        step = 10 if shift else 1
+        step = (
+            KEYBOARD_RADIUS_SHIFT_STEP
+            if shift
+            else KEYBOARD_RADIUS_STEP
+        )
 
         if event.keysym in (
             "plus",
@@ -502,13 +730,13 @@ class App:
         ) != 0
 
         if shift and ctrl:
-            step = 1
+            step = MOVE_FINE
 
         elif shift:
-            step = 10
+            step = MOVE_MEDIUM
 
         else:
-            step = 100
+            step = MOVE_COARSE
 
         if event.keysym == "Left":
             self.selector.cx -= step
@@ -535,10 +763,16 @@ def main():
 
     if len(sys.argv) != 2:
 
+        print()
         print(
-            "\nUsage:\n"
-            "python circle_selector.py imagefile\n"
+            "Usage:"
         )
+
+        print(
+            "    python CircleCapture.py imagefile"
+        )
+
+        print()
 
         return
 
@@ -547,7 +781,7 @@ def main():
     root = tk.Tk()
 
     root.title(
-        "Circle Selector"
+        WINDOW_TITLE
     )
 
     App(
