@@ -67,6 +67,31 @@ The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
+## CircleCapture.py
+[Top](#go-big "Top")<br>
+**CircleCapture.py** is a utility to capture a square portion of an image, displaying the inscribed circle as if on a round display ornament, allow movement
+and resize of the circle, and on command save the contents of the square, resized to 480x480 *.png
+- Inputs: JPG / PNG / BMP / HEIC / HEIF
+- Outputs: 480x480 file in same directory as input named <original>_circle.png *.txt with metadata named <original>_circle.txt
+- Preview automatically scaled to fit screen with full-resolution coordinate system
+
+The output of **CircleCapture.py** can be chained into **mdo_tablegen.py** to produce a *.bin for the 2.1 inch and 2.8 inch displays.
+
+I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
+
+| Control          | Function                |
+| ---------------- | ----------------------- |
+| Mouse drag       | Move circle             |
+| Mouse wheel      | Radius ±5 px            |
+| Arrow            | Move 100 px             |
+| Shift+Arrow      | Move 10 px              |
+| Ctrl+Shift+Arrow | Move 1 px               |
+| +                | Radius +1 px            |
+| Shift++          | Radius +10 px           |
+| -                | Radius -1 px            |
+| Shift+-          | Radius -10 px           |
+| Ctrl+S           | Save PNG + metadata TXT |
+
 ## Software Changes
 [Top](#go-big "Top")<br>
 I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
