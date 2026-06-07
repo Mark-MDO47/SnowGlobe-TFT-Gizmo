@@ -50,24 +50,6 @@ It seems probable that I won't have to modify the program at all to switch betwe
 - When all is said and done, just one line needed changing because Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
-## Software Starting Point - qualia_paint.py and tablegen.py
-[Top](#go-big "Top")<br>
-I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
-
-I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
-- **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these TFT displays.
-- **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
-
-The original Adafruit **qualia_paint.py** can be found here:
-- https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_examples/qualia_paint__latest_2025-12-19.py
-
-The original Adafruit **tablegen.py** and **hextable.py** can be found here:
-- https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
-
 ## CircleCapture.py
 [Top](#go-big "Top")<br>
 **CircleCapture.py** is a utility to capture a square portion of an image, displaying the inscribed circle as if on a round display ornament, allow movement
@@ -95,6 +77,24 @@ I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
 
 Here is an image of **CircleCapture.py** in action<br>
 <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/CircleSelector.jpg" width="400" alt="Circle Selector window">
+
+## Software Starting Point - qualia_paint.py and tablegen.py
+[Top](#go-big "Top")<br>
+I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
+
+I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
+- **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these TFT displays.
+- **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
+
+The original Adafruit **qualia_paint.py** can be found here:
+- https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_examples/qualia_paint__latest_2025-12-19.py
+
+The original Adafruit **tablegen.py** and **hextable.py** can be found here:
+- https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
 ## Software Changes
 [Top](#go-big "Top")<br>
