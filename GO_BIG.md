@@ -61,7 +61,7 @@ and resize of the circle, and on command save the contents of the square, resize
 
 The output of **CircleCapture.py** can be chained into **mdo_tablegen.py** to produce a *.bin for the 2.1 inch and 2.8 inch displays.
 
-I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
+I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**. So far I have made only modest changes by hand.
 
 | Control          | Function                |
 | ---------------- | ----------------------- |
