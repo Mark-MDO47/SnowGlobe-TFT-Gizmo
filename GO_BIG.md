@@ -74,6 +74,7 @@ I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
 | Shift++          | Radius +10 px           |
 | -                | Radius -1 px            |
 | Shift+-          | Radius -10 px           |
+| M or m           | Center circle, max size |
 | Ctrl+S           | Save PNG + metadata TXT |
 
 ### Install Requirements
