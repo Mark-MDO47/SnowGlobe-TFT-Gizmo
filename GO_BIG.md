@@ -89,13 +89,8 @@ Here is an image of **CircleCapture.py** in action<br>
 
 ## Software Starting Point - qualia_paint.py and tablegen.py
 [Top](#go-big "Top")<br>
-I will start from my versions of some things taken from Adafruit libraries as described here in my experiments.
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
-
-I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
-- **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these TFT displays.
-- **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
+The origin for **mdo_tablegen.py** (second stage of image processing after **CircleCapture.py**) is an Adafruit example called **tablegen.py**.<br>
+The origin for the code running in the 2.1 inch and 2.8 inch ornaments is an Adafruit example call **qualia_paint.py**.
 
 The original Adafruit **qualia_paint.py** can be found here:
 - https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
@@ -105,9 +100,18 @@ The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
+The beginnings of my modifications and experiments from this code base is described here
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
+
+I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
+- **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these circular TFT displays.
+- **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
+
 ## Software Changes
 [Top](#go-big "Top")<br>
-I decided to call these programs **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**
+This is a description of the modifications from **mdo_qualia_paint.py** to **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**.
+- It also has a short description of the modifications from **tablegen.py** to **mdo_tablegen.py**
 
 ### Image File Format
 [Top](#go-big "Top")<br>
@@ -119,7 +123,7 @@ This **mdo_tablegen.py** will work for the Snow Globe project too. Maybe some mi
 
 ### Overall Organization
 [Top](#go-big "Top")<br>
-The program starts running the **main()** routine.<br>
+The **mdo_2.1_round_ornament.py** or **mdo_2.8_round_ornament.py** program starts running the **main()** routine.<br>
 ```python
 if __name__ == "__main__":
     main()
@@ -144,7 +148,7 @@ The primary actions of **main()** are
 It still takes 15 seconds to load the **.bin**; I expected longer since we aren't cropping off 1/3 of the picture like mdo_qualia_paint. It takes 25 seconds from power-on but 15 seconds from storing program on USB drive. When looping with a 5 second delay for snow movement it takes 12 seconds, so it seems to take about 7 seconds to actually read .bin, display it, and start snow once the program is initialized.
 - This process shows as the snow holding still while reading .bin followed by a sweep across the screen replacing the background image, then appearance of snowflakes.
 
-Maybe I will make **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
+Maybe I will make a later version **mdo_x.x_round_ornament** not write all the pixels that are not actually on the round display to speed things up. From a visual standpoint, the snow stops moving momentarily and then the image wipes across in about 2 to 3 seconds. Seems to work fine.
 
 On the other hand, the snow movement is definitely jerky compared to the TFT-Gizmo version.
 
