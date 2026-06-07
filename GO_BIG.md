@@ -75,6 +75,14 @@ I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**.
 | Shift+-          | Radius -10 px           |
 | Ctrl+S           | Save PNG + metadata TXT |
 
+### Install Requirements
+[Top](#go-big "Top")<br>
+In order to run CircleCapture, there are some non-standard libraries to install. In the command below, replace **<your installer>** with your installer. It is likely to be either **pip** (standard Python package manager) or **conda** (Anaconda/Conda).
+
+```
+<your installer> install pillow pillow-heif
+```
+
 Here is an image of **CircleCapture.py** in action<br>
 <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/CircleSelector.jpg" width="400" alt="Circle Selector window">
 
