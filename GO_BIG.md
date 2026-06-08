@@ -92,32 +92,34 @@ Here is an image of **CircleCapture.py** in action<br>
 ## Software Starting Point - qualia_paint.py and tablegen.py
 [Top](#go-big "Top")<br>
 The origin for **mdo_tablegen.py** (second stage of image processing after **CircleCapture.py**) is an Adafruit example called **tablegen.py**.<br>
-The origin for the code running in the 2.1 inch and 2.8 inch ornaments is an Adafruit example call **qualia_paint.py**.
-
-The original Adafruit **qualia_paint.py** can be found here:
-- https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
-- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_examples/qualia_paint__latest_2025-12-19.py
+The origin for **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py** (the code running in the 2.1 inch and 2.8 inch ornaments) is an Adafruit example call **qualia_paint.py**.
 
 The original Adafruit **tablegen.py** and **hextable.py** can be found here:
 - https://github.com/adafruit/Uncanny_Eyes commit d2103e84aa33da9f6924885ebc06d880af8deeff
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_Uncanny_Eyes/tablegen.py and hextable.py
 
+The original Adafruit **qualia_paint.py** can be found here:
+- https://docs.circuitpython.org/projects/qualia/en/latest/examples.html
+- https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/mdo_qualia_paint/fromAdafruit_examples/qualia_paint__latest_2025-12-19.py
+
 The beginnings of my modifications and experiments from this code base is described here
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/blob/master/README.md#mdo_qualia_paint
 
-I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**
+I made **mdo_** versions of the Adafruit examples **qualia_paint.py** and **tablegen.py**.
 - https://github.com/Mark-MDO47/expt_AdaFruit_TTL666_display/tree/master/mdo_qualia_paint
 - **mdo_tablegen.py** creates a .bin file from any of .jpg, .png or .bmp. The .bin is in exactly the correct format for use on these circular TFT displays.
 - **mdo_qualia_paint.py** reads these .bin files and can swap between them (plus other functionality not used for the SnowGlobe).
 
+As we shall see, **mdo_qualia_paint.py** was then changed to operate as **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**.
+
 ## Software Changes
 [Top](#go-big "Top")<br>
-This is a description of the modifications from **mdo_qualia_paint.py** to **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**.
+Following is a description of the modifications from **mdo_qualia_paint.py** to **mdo_2.1_round_ornament.py** and **mdo_2.8_round_ornament.py**.
 - It also has a short description of the modifications from **tablegen.py** to **mdo_tablegen.py**
 
 ### Image File Format
 [Top](#go-big "Top")<br>
-When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
+When I started on **mdo_qualia_paint.py** I used **mdo_tablegen.py** to read an image file (.bmp, .png, .jpg) and create the C-language ***.h** file for the 16-bit RBG 565 format, then read that *.h file in **mdo_qualia_paint.py** and convert it at runtime to binary on the board. This took about 2.5 minutes to boot **mdo_qualia_paint.py** even after cropping the left 1/3 of the picture that is used for its controls.
 
 I modified **mdo_tablegen.py** to also create a **.bin** file that is a big-endian version of the data in raw binary. It now takes about 15 seconds to boot **mdo_qualia_paint.py** reading this **.bin** file.
 
@@ -125,7 +127,7 @@ This **mdo_tablegen.py** will work for the Snow Globe project too. Maybe some mi
 
 ### Overall Organization
 [Top](#go-big "Top")<br>
-The **mdo_2.1_round_ornament.py** or **mdo_2.8_round_ornament.py** program (derived originally from **qualia_paint.py**) starts running the **main()** routine.<br>
+The **mdo_2.1_round_ornament.py** or **mdo_2.8_round_ornament.py** programs (derived originally from **qualia_paint.py**) start running the **main()** routine.<br>
 ```python
 if __name__ == "__main__":
     main()
