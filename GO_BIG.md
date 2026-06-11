@@ -46,10 +46,23 @@ The display for the 2.1" is found at https://www.adafruit.com/product/5792.
 
 The display for the 2.8" is found at https://www.adafruit.com/product/5852.
 
-It seems probable that I won't have to modify the program at all to switch between these two displays.
-- Ha ha and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
+Ha Ha Ha! It seems probable that I won't have to modify the program at all to switch between these two displays.
+- ... and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
 - When all is said and done, just one line needed changing because Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
+
+## Software Parts List
+[Top](#go-big "Top")<br>
+Here is a list of the software, both used in the 2.1 and 2.8 ornaments and used in preparation of hardware or image files for the ornaments. If there are multiple links in the **Where** column, the last one leads to the code or instructions and the previous ones lead to description or explanations.
+
+| Name | Description | Where |
+| --- | --- | --- |
+| Factory Reset & Config | how to configure the Qualia ESP32-S3 for Circuit Python | https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#first-steps---factory-reset-and-install-circuit-python |
+| code.py | the code that runs in the ornament for 2.1 and 2.8 displays | - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#software-starting-point---qualia_paintpy-and-tablegenpy<br> - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#overall-organization<br> - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code_GO_BIG_2.1<br> - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code_GO_BIG_2.8 |
+| CircleCapture | utility to select and capture a square portion of an image for the round display | - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#circlecapturepy<br>- https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code_CircleCapture |
+| mdo_tablegen | utility to read square image and converts to binary format |  - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#software-starting-point---qualia_paintpy-and-tablegenpy<br> - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/GO_BIG.md#image-file-format<br> - https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/tree/master/code_qualia_paint/mdo_tablegen_and_hextable |
+
+
 
 ## CircleCapture.py
 [Top](#go-big "Top")<br>
