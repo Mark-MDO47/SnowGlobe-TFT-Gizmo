@@ -77,19 +77,14 @@ The output of **CircleCapture.py** can be chained into **mdo_tablegen.py** to pr
 
 I used ChatGPT using GPT 5.5 to generate **CircleCapture.py**. So far I have made only modest changes by hand.
 
-| Control          | Function                |
-| ---------------- | ----------------------- |
-| Mouse drag       | Move circle             |
-| Mouse wheel      | Radius ±5 px            |
-| Arrow            | Move 100 px             |
-| Shift+Arrow      | Move 10 px              |
-| Ctrl+Shift+Arrow | Move 1 px               |
-| +                | Radius +1 px            |
-| Shift++          | Radius +10 px           |
-| -                | Radius -1 px            |
-| Shift+-          | Radius -10 px           |
-| M or m           | Center circle, max size |
-| Ctrl+S           | Save PNG + metadata TXT |
+| Control          | Function                | Control          | Function                |          
+| ---------------- | ----------------------- | ---------------- | ----------------------- |
+| Mouse drag       | Move circle             | Mouse wheel      | Radius ±5 px            |
+| Arrow            | Move 100 px             | Shift++          | Radius +10 px           |
+| Shift+Arrow      | Move 10 px              | +                | Radius +1 px            |
+| Ctrl+Shift+Arrow | Move 1 px               | Shift+-          | Radius -10 px           |
+| M or m           | Center circle, max size | -                | Radius -1 px            |
+| Ctrl+S           | Save PNG + metadata TXT | window click-X   | exit                    |
 
 ### Install Requirements
 [Top](#go-big "Top")<br>
