@@ -12,9 +12,10 @@ I decided to make a bigger version of the Snow Globe.
 | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays2.jpg" width="400" alt="All three displays fireplace scene"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/ThreeDisplays3.jpg" width="400" alt="All 3 displays Popular Electronics"> |
 
-| 2.8" ornament stand #1 | 2.8" ornament stand #2  | 2.8" ornament stand #3 |
+| 2.8" ornament mount #1 | 2.8" ornament mount #2  | 2.8" ornament mount #3 |
 | --- | --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_03.jpg" width="400" alt="3D printed stand"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_04.jpg" width="400" alt="3D printed stand"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_05.jpg" width="400" alt="3D printed stand"> |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_03.jpg" width="400" alt="3D printed stand"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_04.jpg" width="400" alt="3D printed mount"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_05.jpg" width="400" alt="3D printed mount"> |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | N/A |
 
 **Table Of Contents**
 * [Top](#go-big "Top")
@@ -51,6 +52,12 @@ Ha Ha Ha! It seems probable that I won't have to modify the program at all to sw
 - ... and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
 - When all is said and done, just one line needed changing because Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
+
+#### 3D Printed Mount for GO BIG and GO BIGGER
+[Top](#go-big "Top")<br>
+My good buddy Jim created a 3D printed mount to hold the Qualia ESP32 board on the 2.1 inch or 2.8 inch display. Images are shown near the top of this page. Pay special attention to the rounded bump around one of the screw mounts; this is to provide extra grip area and strength near the USB port.
+
+The Qualia board supports four #2.5 screws; the mount works with a length of 5mm or maybe 6mm inserted through the Qualia board.
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
