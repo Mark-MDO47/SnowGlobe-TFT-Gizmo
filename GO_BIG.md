@@ -15,7 +15,10 @@ I decided to make a bigger version of the Snow Globe.
 | 2.8" ornament mount #1 | 2.8" ornament mount #2  | 2.8" ornament mount #3 |
 | --- | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_03.jpg" width="400" alt="3D printed stand"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_04.jpg" width="400" alt="3D printed mount"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_05.jpg" width="400" alt="3D printed mount"> |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | N/A |
+
+| 2.8" ornament mount orientation | 2.8" ornament mount strenghtening  | 2.8" ornament mount close-up |
+| --- | --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_small.jpg" width="400" alt="3D printed mount close-up"> |
 
 **Table Of Contents**
 * [Top](#go-big "Top")
