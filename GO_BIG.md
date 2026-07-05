@@ -53,6 +53,12 @@ Ha Ha Ha! It seems probable that I won't have to modify the program at all to sw
 - When all is said and done, just one line needed changing because Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
+#### 3D Printed Mount for GO BIG and GO BIGGER
+[Top](#go-big "Top")<br>
+My good buddy Jim created a 3D printed mount to hold the Qualia ESP32 board on the 2.1 inch or 2.8 inch display. Images are shown near the top of this page. Pay special attention to the rounded bump around one of the screw mounts; this is to provide extra grip area and strength near the USB port.
+
+The Qualia board supports four #2.5 screws; the mount works with a length of 5mm or maybe 6mm inserted through the Qualia board.
+
 ## Software Parts List
 [Top](#go-big "Top")<br>
 Here is a list of the software, both used in the 2.1 and 2.8 ornaments and used in preparation of hardware or image files for the ornaments. If there are multiple links in the **Where** column, the last one leads to the code or instructions and the previous ones lead to description or explanations.
