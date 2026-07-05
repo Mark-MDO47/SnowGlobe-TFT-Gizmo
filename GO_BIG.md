@@ -52,8 +52,8 @@ The display for the 2.1" is found at https://www.adafruit.com/product/5792.
 
 The display for the 2.8" is found at https://www.adafruit.com/product/5852.
 
-Ha Ha Ha! It seems probable that I won't have to modify the program at all to switch between these two displays.
-- ... and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
+It seems probable that I won't have to modify the program at all to switch between these two displays.
+- Ha Ha Ha! ... and a mirthless chuckle! That was incorrect. The two displays use a different controller chip with different initialization etc.
 - When all is said and done, just one line needed changing because Adafruit added the 2.8 to their list of supported displays.
 - See [2.8 inch Display](#28-inch-display "2.8 inch Display")
 
