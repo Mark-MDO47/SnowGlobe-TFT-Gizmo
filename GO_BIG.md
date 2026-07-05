@@ -61,7 +61,7 @@ Ha Ha Ha! It seems probable that I won't have to modify the program at all to sw
 [Top](#go-big "Top")<br>
 My good buddy Jim created a 3D printed mount to hold the Qualia ESP32 board on the 2.1 inch or 2.8 inch display. Images are shown near the top of this page. Pay special attention to the rounded bump around one of the screw mounts; this is to provide extra grip area and strength near the USB port.
 
-The Qualia board supports four #2.5 screws; the mount works with a length of 5mm or maybe 6mm inserted through the Qualia board.
+The Qualia board supports four #2.5 screws; it is designed for a screw length of 5mm or maybe 6mm inserted through the Qualia board. The mount is attached to the back of the display with super glue.
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
