@@ -43,7 +43,6 @@ Here is the Snow Globe in the tree<br>
 * [Version-Dependent Snow Globe Behavior](#version\-dependent-snow-globe-behavior "Version-Dependent Snow Globe Behavior")
 * [Preparation of the TFT Gizmo Electronics](#preparation-of-the-tft-gizmo-electronics "Preparation of the TFT Gizmo Electronics")
 * [Preparation of Plastic Ornament Globe](#preparation-of-plastic-ornament-globe "Preparation of Plastic Ornament Globe")
-* [Go Big 2.1 inch or Go Bigger 2.8 inch Round Display](#go-big-21-inch-or-go-bigger-28-inch-round-display "Go Big 2.1 inch or Go Bigger 2.8 inch Round Display")
 * [Software - TFT Gizmo](#software-\--tft-gizmo "Software - TFT Gizmo")
   * [Potential Next Version ideas](#potential-next-version-ideas "Potential Next Version ideas")
 * [Parts List TFT-Gizmo](#parts-list-tft\-gizmo "Parts List TFT-Gizmo")
@@ -56,6 +55,7 @@ Here is the Snow Globe in the tree<br>
     * [Learn the basics of Circuit Playground Bluefruit](#learn-the-basics-of-circuit-playground-bluefruit "Learn the basics of Circuit Playground Bluefruit")
     * [The Big Kahuna - the API registry.](#the-big-kahuna-\--the-api-registry "The Big Kahuna - the API registry.")
   * [Non-Official but Useful](#non\-official-but-useful "Non-Official but Useful")
+* [Go Big 2.1 inch or Go Bigger 2.8 inch Round Display](#go-big-21-inch-or-go-bigger-28-inch-round-display "Go Big 2.1 inch or Go Bigger 2.8 inch Round Display")
 
 ## Version-Dependent Snow Globe Behavior
 [Top](#snowglobe-tft\-gizmo "Top")<br>

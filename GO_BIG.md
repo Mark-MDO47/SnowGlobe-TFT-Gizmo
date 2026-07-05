@@ -21,6 +21,7 @@ I decided to make a bigger version of the Snow Globe.
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
   * [Hardware for GO BIG and GO BIGGER](#hardware-for-go-big-and-go-bigger "Hardware for GO BIG and GO BIGGER")
+    * [3D Printed Mount for GO BIG and GO BIGGER](#3d-printed-mount-for-go-big-and-go-bigger "3D Printed Mount for GO BIG and GO BIGGER")
 * [Software Parts List](#software-parts-list "Software Parts List")
 * [CircleCapture.py](#circlecapturepy "CircleCapture.py")
   * [Install Requirements](#install-requirements "Install Requirements")
