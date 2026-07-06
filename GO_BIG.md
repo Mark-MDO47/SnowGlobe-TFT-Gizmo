@@ -16,10 +16,6 @@ I decided to make a bigger version of the Snow Globe.
 | --- | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_03.jpg" width="400" alt="3D printed stand"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_04.jpg" width="400" alt="3D printed mount"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentStand_2.8_05.jpg" width="400" alt="3D printed mount"> |
 
-| 2.8" ornament mount orientation | 2.8" ornament mount strenghtening  | 2.8" ornament mount close-up |
-| --- | --- | --- |
-| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_small.jpg" width="400" alt="3D printed mount close-up"> |
-
 **Table Of Contents**
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
@@ -59,9 +55,13 @@ It seems probable that I won't have to modify the program at all to switch betwe
 
 #### 3D Printed Mount for GO BIG and GO BIGGER
 [Top](#go-big "Top")<br>
-My good buddy Jim created a 3D printed mount to hold the Qualia ESP32 board on the 2.1 inch or 2.8 inch display. Images are shown near the top of this page. Pay special attention to the rounded bump around one of the screw mounts; this is to provide extra grip area and strength near the USB port.
+My good buddy Jim created a 3D printed mount to hold the Qualia ESP32 board on the 2.1 inch or 2.8 inch display. Images are shown near the top of this page and below. Pay special attention to the rounded bump around one of the screw mounts; this is to provide extra grip area and strength near the USB port.
 
 The Qualia board supports four #2.5 screws; it is designed for a screw length of 5mm or maybe 6mm inserted through the Qualia board. The mount is attached to the back of the display with super glue.
+
+| 2.8" ornament mount orientation | 2.8" ornament mount strenghtening  | 2.8" ornament mount close-up |
+| --- | --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_small.jpg" width="400" alt="3D printed mount close-up"> |
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
