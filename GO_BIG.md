@@ -20,7 +20,7 @@ I decided to make a bigger version of the Snow Globe.
 * [Top](#go-big "Top")
 * [The Plan](#the-plan "The Plan")
   * [Hardware for GO BIG and GO BIGGER](#hardware-for-go-big-and-go-bigger "Hardware for GO BIG and GO BIGGER")
-    * [3D Printed Mount for GO BIG and GO BIGGER](#3d-printed-mount-for-go-big-and-go-bigger "3D Printed Mount for GO BIG and GO BIGGER")
+    * [3D  Mount for GO BIG and GO BIGGER](#3d--mount-for-go-big-and-go-bigger "3D Printed Mount for GO BIG and GO BIGGER")
 * [Software Parts List](#software-parts-list "Software Parts List")
 * [CircleCapture.py](#circlecapturepy "CircleCapture.py")
   * [Install Requirements](#install-requirements "Install Requirements")
@@ -62,6 +62,13 @@ The Qualia board supports four #2.5 screws; it is designed for a screw length of
 | 2.8" ornament mount orientation | 2.8" ornament mount strenghtening  | 2.8" ornament mount close-up |
 | --- | --- | --- |
 | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Orientation_small.jpg" width="400" alt="3D printed mount orientation"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_Strengthening_small.jpg" width="400" alt="3D printed mount strengthening"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/OrnamentMount_small.jpg" width="400" alt="3D printed mount close-up"> |
+
+#### Entrance for USB Cable in Plastic Globe
+[Top](#go-big "Top")<br>
+Since I am using external power (USB-C), I need an entrance hole into the clear plastic globe. Using the E printed mount and an 8 inch globe, I wanted to place the hole to the side far enough that it straightens out the image to avoid doing fractional rotations of the image.
+
+I put together some scrap wood to hold the globe in position when melting a hole using a plastic repair tool. After some experimentation, I placed a mark where the center line of the hole would touch and another which would be directly below the hole in the tab of the plastic globe when positioned correctly.
+
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
