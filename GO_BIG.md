@@ -66,11 +66,13 @@ The Qualia board supports four #2.5 screws; it is designed for a screw length of
 
 #### Entrance for USB Cable in Plastic Globe
 [Top](#go-big "Top")<br>
-Since I am using external power (USB-C), I need an entrance hole into the clear plastic globe. Using the E printed mount and an 8 inch globe, I wanted to place the hole to the side far enough that it straightens out the image to avoid doing fractional rotations of the image.
+Since I am using external power (USB-C), I need an entrance hole into the clear plastic globe. Using the E printed mount and an 90 mm globe, I wanted to place the hole to the side far enough that it straightens out the image to avoid doing fractional rotations of the image.
 
 I put together some scrap wood and made a jig to hold the globe in position when melting the hole using a plastic repair tool. After some experimentation, I placed a mark where the center line of the hole would touch and another which would be directly below the hole in the tab of the plastic globe when positioned correctly.
 
-<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobeJig_Top.jpg" width="400" alt="Plastic Globe Jig Top View">
+| Top View | Side View  |
+| --- | --- |
+| <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobeJig_Top.jpg" width="400" alt="Plastic Globe Jig Top View"> | <img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobeJig_Side.jpg" width="400" alt="Plastic Globe Jig Side View"> |
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
