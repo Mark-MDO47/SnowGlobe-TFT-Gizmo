@@ -68,8 +68,9 @@ The Qualia board supports four #2.5 screws; it is designed for a screw length of
 [Top](#go-big "Top")<br>
 Since I am using external power (USB-C), I need an entrance hole into the clear plastic globe. Using the E printed mount and an 8 inch globe, I wanted to place the hole to the side far enough that it straightens out the image to avoid doing fractional rotations of the image.
 
-I put together some scrap wood to hold the globe in position when melting a hole using a plastic repair tool. After some experimentation, I placed a mark where the center line of the hole would touch and another which would be directly below the hole in the tab of the plastic globe when positioned correctly.
+I put together some scrap wood and made a jig to hold the globe in position when melting the hole using a plastic repair tool. After some experimentation, I placed a mark where the center line of the hole would touch and another which would be directly below the hole in the tab of the plastic globe when positioned correctly.
 
+<img src="https://github.com/Mark-MDO47/SnowGlobe-TFT-Gizmo/blob/master/resources/images/SnowGlobeJig_Top.jpg" width="400" alt="Plastic Globe Jig Top View">
 
 ## Software Parts List
 [Top](#go-big "Top")<br>
